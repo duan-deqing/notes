@@ -383,3 +383,328 @@
 [data-md-color-scheme="slate"] .md-typeset code {
   background-color: rgba(255, 255, 255, 0.05);
 }
+
+/* ============================================
+   首页 Hero 区域（全屏背景图）
+   替换背景图：将你的图片放入 docs/assets/ 目录，
+   修改下方 --mdx-hero-bg 变量为你的图片路径即可
+   当前使用占位 SVG，可直接替换为 JPG/PNG/WebP
+   ============================================ */
+
+:root {
+  --mdx-hero-bg: url("../assets/1-landscape@3x.avif");
+}
+
+.mdx-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.mdx-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 100dvh;
+  height: 100dvh;
+  padding: 120px 0 80px;
+  background-image: var(--mdx-hero-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #2d2d2d;
+}
+
+.mdx-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  z-index: 1;
+}
+
+.mdx-hero .md-grid {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.mdx-hero__content {
+  max-width: 600px;
+  color: #ffffff;
+  padding-bottom: 40px;
+}
+
+.mdx-hero__content h1 {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  color: currentColor;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.mdx-hero__content p {
+  font-size: 1.25em;
+  margin: 0 0 2em;
+  line-height: 1.6;
+  opacity: 0.9;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mdx-hero .md-button {
+  font-size: 0.85em;
+  padding: 0.8em 2.5em;
+  border-radius: 2em;
+}
+
+.mdx-hero .md-button--primary {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.mdx-hero .md-button--primary:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+/* ============================================
+   首页 - 探索笔记（Spotlight 卡片网格）
+   ============================================ */
+.mdx-spotlight {
+  padding: 80px 0 60px;
+}
+
+.mdx-spotlight h2 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 1.5em;
+  font-weight: 700;
+}
+
+.mdx-spotlight__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.mdx-spotlight__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--md-default-fg-color);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.mdx-spotlight__item:hover {
+  border-color: var(--md-primary-fg-color);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.06);
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+}
+
+.mdx-spotlight__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+.mdx-spotlight__icon .twemoji {
+  width: 24px;
+  height: 24px;
+}
+
+.mdx-spotlight__item h3 {
+  margin: 0 0 8px;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.mdx-spotlight__item p {
+  margin: 0;
+  font-size: 0.85em;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.5;
+}
+
+/* ============================================
+   首页 - 为什么选择（Showcase 列表）
+   ============================================ */
+.mdx-showcase {
+  padding: 60px 0 80px;
+  background-color: var(--md-default-fg-color--lightest);
+}
+
+.mdx-showcase h2 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 1.5em;
+  font-weight: 700;
+}
+
+.mdx-showcase__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.mdx-showcase__item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.mdx-showcase__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(63, 81, 181, 0.1);
+  color: var(--md-primary-fg-color);
+}
+
+.mdx-showcase__icon .twemoji {
+  width: 24px;
+  height: 24px;
+}
+
+.mdx-showcase__item h3 {
+  margin: 0 0 6px;
+  font-size: 1.05em;
+  font-weight: 700;
+}
+
+.mdx-showcase__item p {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.6;
+}
+
+/* ============================================
+   首页 - 持续积累（Trust 居中文本）
+   ============================================ */
+.mdx-trust {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.mdx-trust h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.8em;
+  font-weight: 700;
+}
+
+.mdx-trust p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.05em;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.7;
+}
+
+/* ============================================
+   首页 - 底部 CTA
+   ============================================ */
+.mdx-cta {
+  padding: 80px 0;
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  text-align: center;
+}
+
+.mdx-cta__content h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+.mdx-cta__content p {
+  font-size: 1.1em;
+  opacity: 0.85;
+  margin-bottom: 2em;
+}
+
+.mdx-cta .md-button--primary {
+  font-size: 0.85em;
+  padding: 0.8em 2.5em;
+  border-radius: 2em;
+  background-color: var(--md-primary-bg-color);
+  border-color: var(--md-primary-bg-color);
+  color: var(--md-primary-fg-color);
+}
+
+.mdx-cta .md-button--primary:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================
+   首页 - 响应式
+   ============================================ */
+@media (max-width: 768px) {
+  .mdx-hero {
+    min-height: 100dvh;
+    height: 100dvh;
+    padding: 100px 16px 60px;
+  }
+
+  .mdx-hero__content {
+    padding-bottom: 20px;
+  }
+
+  .mdx-hero__content h1 {
+    font-size: 2em;
+  }
+
+  .mdx-hero__content p {
+    font-size: 1em;
+  }
+
+  .mdx-spotlight {
+    padding: 40px 0 30px;
+  }
+
+  .mdx-spotlight__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mdx-showcase {
+    padding: 40px 0;
+  }
+
+  .mdx-showcase__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mdx-trust {
+    padding: 40px 0;
+  }
+
+  .mdx-cta {
+    padding: 40px 0;
+  }
+}

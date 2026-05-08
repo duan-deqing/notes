@@ -15,6 +15,7 @@ copyright: Copyright &copy; 2026 STYLAN
 # configuration 配置
 theme:
   name: material
+  custom_dir: overrides
 
   features:
     # 设置内容操作按钮
@@ -95,6 +96,8 @@ extra_javascript:
 
 # Extensions 扩展
 markdown_extensions:
+  - attr_list
+  - md_in_html
   # 代码高亮
   - pymdownx.highlight:
       anchor_linenums: true

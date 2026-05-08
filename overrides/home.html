@@ -1,0 +1,263 @@
+{% extends "main.html" %} {% block tabs %} {{ super() }}
+
+<style>
+  .md-header {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 4;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transition:
+      background-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .md-header--scrolled {
+    background-color: var(--md-primary-fg-color) !important;
+    box-shadow:
+      0 0 4px rgba(0, 0, 0, 0.14),
+      0 4px 8px rgba(0, 0, 0, 0.28) !important;
+  }
+
+  [data-md-color-scheme="slate"] .md-header--scrolled {
+    background-color: var(--md-primary-fg-color) !important;
+  }
+
+  .md-tabs {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    background-color: transparent !important;
+    transition: background-color 0.3s ease;
+  }
+
+  .md-tabs--scrolled {
+    background-color: var(--md-primary-fg-color) !important;
+    box-shadow:
+      0 0 4px rgba(0, 0, 0, 0.14),
+      0 4px 8px rgba(0, 0, 0, 0.28);
+  }
+
+  .md-main__inner {
+    margin: 0;
+  }
+
+  .md-content {
+    display: none;
+  }
+
+  @media screen and (min-width: 60em) {
+    .md-sidebar--secondary {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 76.25em) {
+    .md-sidebar--primary {
+      display: none;
+    }
+  }
+</style>
+
+<section class="mdx-container">
+  <div class="mdx-hero">
+    <div class="md-grid">
+      <div class="mdx-hero__content">
+        <h1>{{ page.meta.title | default(config.site_name) }}</h1>
+        <p>{{ config.site_description }}</p>
+        <a
+          href="{{ page.next_page.url | url }}"
+          title="{{ page.next_page.title | e }}"
+          class="md-button md-button--primary"
+        >
+          开始阅读
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mdx-spotlight">
+  <div class="md-grid md-typeset">
+    <h2>探索笔记</h2>
+    <div class="mdx-spotlight__grid">
+      <a
+        href="{{ '_notes/python/python-getting-started.md' | url }}"
+        class="mdx-spotlight__item"
+      >
+        <span class="mdx-spotlight__icon">
+          <span class="twemoji"
+            >{% include ".icons/fontawesome/brands/python.svg" %}</span
+          >
+        </span>
+        <h3>Python</h3>
+        <p>基础语法、函数、模块、调试等核心知识</p>
+      </a>
+
+      <a
+        href="{{ '_notes/rag/rag-getting-started.md' | url }}"
+        class="mdx-spotlight__item"
+      >
+        <span class="mdx-spotlight__icon">
+          <span class="twemoji">{% include ".icons/material/brain.svg" %}</span>
+        </span>
+        <h3>RAG</h3>
+        <p>检索增强生成技术，大模型应用开发</p>
+      </a>
+
+      <a
+        href="{{ '_notes/langchain/langchain-getting-started.md' | url }}"
+        class="mdx-spotlight__item"
+      >
+        <span class="mdx-spotlight__icon">
+          <span class="twemoji">{% include ".icons/material/link.svg" %}</span>
+        </span>
+        <h3>LangChain</h3>
+        <p>LangChain 框架学习，构建 LLM 应用</p>
+      </a>
+
+      <a
+        href="{{ '_notes/react/react-getting-started.md' | url }}"
+        class="mdx-spotlight__item"
+      >
+        <span class="mdx-spotlight__icon">
+          <span class="twemoji"
+            >{% include ".icons/fontawesome/brands/react.svg" %}</span
+          >
+        </span>
+        <h3>React</h3>
+        <p>React 前端框架学习笔记</p>
+      </a>
+
+      <a
+        href="{{ '_notes/other/git-getting-started.md' | url }}"
+        class="mdx-spotlight__item"
+      >
+        <span class="mdx-spotlight__icon">
+          <span class="twemoji"
+            >{% include ".icons/fontawesome/brands/git-alt.svg" %}</span
+          >
+        </span>
+        <h3>Git</h3>
+        <p>Git 版本控制实用技巧</p>
+      </a>
+
+      <a
+        href="{{ '_notes/other/markdown-getting-started.md' | url }}"
+        class="mdx-spotlight__item"
+      >
+        <span class="mdx-spotlight__icon">
+          <span class="twemoji"
+            >{% include ".icons/fontawesome/brands/markdown.svg" %}</span
+          >
+        </span>
+        <h3>Markdown</h3>
+        <p>Markdown 语法与写作技巧</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="mdx-showcase">
+  <div class="md-grid md-typeset">
+    <h2>为什么选择这些笔记</h2>
+    <div class="mdx-showcase__grid">
+      <div class="mdx-showcase__item">
+        <span class="mdx-showcase__icon"
+          >{% include ".icons/material/file-document.svg" %}</span
+        >
+        <div>
+          <h3>纯 Markdown 编写</h3>
+          <p>
+            专注于内容本身，无需了解 HTML、CSS 或 JavaScript，让 MkDocs Material
+            为你处理繁重的工作。
+          </p>
+        </div>
+      </div>
+
+      <div class="mdx-showcase__item">
+        <span class="mdx-showcase__icon"
+          >{% include ".icons/material/devices.svg" %}</span
+        >
+        <div>
+          <h3>全设备适配</h3>
+          <p>自动适配桌面、平板、手机等各种屏幕尺寸，随时随地查阅笔记。</p>
+        </div>
+      </div>
+
+      <div class="mdx-showcase__item">
+        <span class="mdx-showcase__icon"
+          >{% include ".icons/material/palette.svg" %}</span
+        >
+        <div>
+          <h3>高度可定制</h3>
+          <p>自由调整颜色、字体、图标、Logo 等，轻松打造个性化笔记站点。</p>
+        </div>
+      </div>
+
+      <div class="mdx-showcase__item">
+        <span class="mdx-showcase__icon"
+          >{% include ".icons/material/magnify.svg" %}</span
+        >
+        <div>
+          <h3>内置搜索</h3>
+          <p>零配置即可获得即时搜索能力，支持中文分词，搜索结果即时呈现。</p>
+        </div>
+      </div>
+
+      <div class="mdx-showcase__item">
+        <span class="mdx-showcase__icon"
+          >{% include ".icons/material/shield-check.svg" %}</span
+        >
+        <div>
+          <h3>完全掌控</h3>
+          <p>
+            拥有文档的完整源码和输出，保证数据完整性和安全性，无需依赖第三方平台。
+          </p>
+        </div>
+      </div>
+
+      <div class="mdx-showcase__item">
+        <span class="mdx-showcase__icon"
+          >{% include ".icons/material/github.svg" %}</span
+        >
+        <div>
+          <h3>开源驱动</h3>
+          <p>基于成熟活跃的开源技术构建，由全球开发者社区持续维护和改进。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mdx-trust">
+  <div class="md-grid md-typeset">
+    <h2>持续积累</h2>
+    <p>
+      每一篇笔记都是学习路上的脚印。从 Python 基础到 RAG 应用，从 Git 技巧到
+      React 开发，这里记录着技术成长的每一步。
+    </p>
+  </div>
+</section>
+
+<section class="mdx-cta">
+  <div class="md-grid md-typeset">
+    <div class="mdx-cta__content">
+      <h2>开始你的学习之旅</h2>
+      <p>持续更新中，记录每一个技术点滴</p>
+      <a
+        href="{{ page.next_page.url | url }}"
+        title="{{ page.next_page.title | e }}"
+        class="md-button md-button--primary"
+      >
+        立即开始
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %} {% block content %}{% endblock %} {% block footer %} {{ super()
+}} {% endblock %}
