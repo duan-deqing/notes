@@ -20,8 +20,6 @@ jobs:
           python-version: 3.x
 
       - name: 安装依赖
-        run: |
-          pip install mkdocs-material
-          # 如果你有其他插件，也在这里一行行安装（如 pip install mkdocs-git-revision-date-localized-plugin）
+        run: pip install -r requirements.txt
       - name: 执行部署
         run: mkdocs gh-deploy --force
