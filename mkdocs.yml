@@ -1,6 +1,78 @@
-repo_url: https://github.com/duan-deqing/notes
-
+# Project information 项目信息
 site_name: STYLAN's Notes
 site_url: https://duan-deqing.github.io/notes/
+site_author: duan-deqing
+site_description: >-
+  我的学习笔记
+
+# Repository 仓库
+repo_name: duan-deqing/notes
+repo_url: https://github.com/duan-deqing/notes
+
+# Copyright
+copyright: Copyright &copy; 2026 STYLAN
+
+# configuration 配置
 theme:
   name: material
+
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: 切换至浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: 切换至深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  # 字体设置
+  font:
+    text: Roboto
+    code: Roboto Mono
+  # 浏览器图标
+  favicon: assets/favicon.png
+  # # logo
+  # icon:
+  #   logo: logo
+
+# Extensions 扩展
+markdown_extensions:
+
+nav:
