@@ -3,3 +3,7 @@ mkdocs
 
 # themes
 mkdocs-material
+
+# markdown extensions
+pymdown-extensions
+pygments

@@ -17,11 +17,16 @@ theme:
   name: material
 
   features:
-    - content.action.edit
-    - content.action.view
+    # 设置内容操作按钮
+    # - content.action.edit
+    # - content.action.view
+
+    # 设置代码操作按钮
     - content.code.annotate
     - content.code.copy
-    # - content.code.select
+    - content.code.select
+
+    # 设置其他操作按钮
     # - content.footnote.tooltips
     # - content.tabs.link
     - content.tooltips
@@ -48,31 +53,69 @@ theme:
       toggle:
         icon: material/link
         name: 切换至浅色模式
+    # 浅色模式
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: blue
+      accent: blue
       toggle:
         icon: material/toggle-switch
         name: 切换至深色模式
+    # 深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: indigo
       toggle:
         icon: material/toggle-switch-off
-        name: Switch to system preference
+        name: 切换至系统偏好
   # 字体设置
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: "Noto Sans SC"
+    code: Fira Code, Roboto Mono
   # 浏览器图标
-  favicon: assets/favicon.png
+  favicon: assets/favicon.ico
   # # logo
   # icon:
   #   logo: logo
 
+# 额外配置
+extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
+
+# 自定义 CSS
+extra_css:
+  - stylesheets/extra.css
+
+# 自定义主题配置
+extra_javascript:
+  - javascripts/extra.js
+
 # Extensions 扩展
 markdown_extensions:
+  # 代码高亮
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
+# Navigation 导航
+# 读取docs目录下的所有文件，生成导航
 nav:
+  - 首页: index.md
+  - Python:
+      - Getting started: _notes/python/python-getting-started.md
+  - RAG:
+      - Getting started: _notes/rag/rag-getting-started.md
+  - Langchain:
+      - Getting started: _notes/langchain/langchain-getting-started.md
+  - React:
+      - Getting started: _notes/react/react-getting-started.md
+  - 其他:
+      - Git: _notes/other/git-getting-started.md
+      - Markdown: _notes/other/markdown-getting-started.md
