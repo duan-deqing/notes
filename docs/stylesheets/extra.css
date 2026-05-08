@@ -404,10 +404,10 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100dvh;
   height: 100dvh;
-  padding: 120px 0 80px;
+  padding: clamp(80px, 10vh, 140px) 16px clamp(40px, 6vh, 80px);
   background-image: var(--mdx-hero-bg);
   background-size: cover;
   background-position: center;
@@ -437,11 +437,11 @@
 .mdx-hero__content {
   max-width: 600px;
   color: #ffffff;
-  padding-bottom: 40px;
+  padding-bottom: clamp(20px, 4vh, 40px);
 }
 
 .mdx-hero__content h1 {
-  font-size: 3em;
+  font-size: 5em;
   font-weight: 700;
   margin-bottom: 0.3em;
   color: currentColor;
@@ -450,7 +450,7 @@
 }
 
 .mdx-hero__content p {
-  font-size: 1.25em;
+  font-size: 1.6em;
   margin: 0 0 2em;
   line-height: 1.6;
   opacity: 0.9;
@@ -458,32 +458,37 @@
 }
 
 .mdx-hero .md-button {
-  font-size: 0.85em;
-  padding: 0.8em 2.5em;
-  border-radius: 2em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 9em;
+  height: 3.5em;
+  font-size: 1.6em;
+  padding: 0;
+  border-radius: 0.25em;
 }
 
 .mdx-hero .md-button--primary {
-  background-color: #ffffff;
-  border-color: #ffffff;
-  color: #1a1a1a;
+  background-color: rgb(221, 46, 87);
+  border-color: rgb(221, 46, 87);
+  color: var(--md-primary-bg-color);
 }
 
 .mdx-hero .md-button--primary:hover {
-  background-color: rgba(255, 255, 255, 0.85);
-  border-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(221, 46, 87, 0.85);
+  border-color: rgba(221, 46, 87, 0.85);
 }
 
 /* ============================================
    首页 - 探索笔记（Spotlight 卡片网格）
    ============================================ */
 .mdx-spotlight {
-  padding: 80px 0 60px;
+  padding: clamp(40px, 6vh, 80px) 16px clamp(30px, 4vh, 60px);
 }
 
 .mdx-spotlight h2 {
   text-align: center;
-  font-size: 1.8em;
+  font-size: clamp(1.4em, 2.5vw, 1.8em);
   margin-bottom: 1.5em;
   font-weight: 700;
 }
@@ -498,7 +503,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 24px;
+  padding: clamp(16px, 2vw, 24px);
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 8px;
   text-decoration: none;
@@ -551,13 +556,13 @@
    首页 - 为什么选择（Showcase 列表）
    ============================================ */
 .mdx-showcase {
-  padding: 60px 0 80px;
+  padding: clamp(40px, 5vh, 60px) 16px clamp(40px, 6vh, 80px);
   background-color: var(--md-default-fg-color--lightest);
 }
 
 .mdx-showcase h2 {
   text-align: center;
-  font-size: 1.8em;
+  font-size: clamp(1.4em, 2.5vw, 1.8em);
   margin-bottom: 1.5em;
   font-weight: 700;
 }
@@ -565,12 +570,12 @@
 .mdx-showcase__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: clamp(16px, 2vw, 24px);
 }
 
 .mdx-showcase__item {
   display: flex;
-  gap: 20px;
+  gap: clamp(12px, 1.5vw, 20px);
   align-items: flex-start;
 }
 
@@ -608,20 +613,20 @@
    首页 - 持续积累（Trust 居中文本）
    ============================================ */
 .mdx-trust {
-  padding: 80px 0;
+  padding: clamp(40px, 6vh, 80px) 16px;
   text-align: center;
 }
 
 .mdx-trust h2 {
-  font-size: 1.8em;
+  font-size: clamp(1.4em, 2.5vw, 1.8em);
   margin-bottom: 0.8em;
   font-weight: 700;
 }
 
 .mdx-trust p {
-  max-width: 700px;
+  max-width: clamp(300px, 80%, 700px);
   margin: 0 auto;
-  font-size: 1.05em;
+  font-size: clamp(0.9em, 1.2vw, 1.05em);
   color: var(--md-default-fg-color--light);
   line-height: 1.7;
 }
@@ -630,20 +635,20 @@
    首页 - 底部 CTA
    ============================================ */
 .mdx-cta {
-  padding: 80px 0;
+  padding: clamp(40px, 6vh, 80px) 16px;
   background-color: var(--md-primary-fg-color);
   color: var(--md-primary-bg-color);
   text-align: center;
 }
 
 .mdx-cta__content h2 {
-  font-size: 1.8em;
+  font-size: clamp(1.4em, 2.5vw, 1.8em);
   margin-bottom: 0.5em;
   font-weight: 700;
 }
 
 .mdx-cta__content p {
-  font-size: 1.1em;
+  font-size: clamp(0.95em, 1.3vw, 1.1em);
   opacity: 0.85;
   margin-bottom: 2em;
 }
@@ -651,7 +656,7 @@
 .mdx-cta .md-button--primary {
   font-size: 0.85em;
   padding: 0.8em 2.5em;
-  border-radius: 2em;
+  border-radius: 0.4em;
   background-color: var(--md-primary-bg-color);
   border-color: var(--md-primary-bg-color);
   color: var(--md-primary-fg-color);
@@ -665,46 +670,70 @@
 /* ============================================
    首页 - 响应式
    ============================================ */
+
+/* 中等桌面 (≤1220px)：spotlight 两列 */
+@media (max-width: 76.25em) {
+  .mdx-spotlight__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 平板横屏 (≤960px)：showcase 单列 */
+@media (max-width: 60em) {
+  .mdx-showcase__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 平板竖屏 (≤768px) */
 @media (max-width: 768px) {
   .mdx-hero {
-    min-height: 100dvh;
-    height: 100dvh;
     padding: 100px 16px 60px;
-  }
-
-  .mdx-hero__content {
-    padding-bottom: 20px;
-  }
-
-  .mdx-hero__content h1 {
-    font-size: 2em;
-  }
-
-  .mdx-hero__content p {
-    font-size: 1em;
-  }
-
-  .mdx-spotlight {
-    padding: 40px 0 30px;
   }
 
   .mdx-spotlight__grid {
     grid-template-columns: 1fr;
   }
 
-  .mdx-showcase {
-    padding: 40px 0;
+  .mdx-spotlight__icon {
+    width: 40px;
+    height: 40px;
   }
 
-  .mdx-showcase__grid {
-    grid-template-columns: 1fr;
+  .mdx-spotlight__icon .twemoji {
+    width: 20px;
+    height: 20px;
   }
 
-  .mdx-trust {
-    padding: 40px 0;
+  .mdx-showcase__icon {
+    width: 40px;
+    height: 40px;
   }
 
-  .mdx-cta {
-    padding: 40px 0;
+  .mdx-showcase__icon .twemoji {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* 小平板 (481px-768px)：spotlight 两列 */
+@media (min-width: 481px) and (max-width: 768px) {
+  .mdx-spotlight__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 小手机 (≤480px) */
+@media (max-width: 480px) {
+  .mdx-hero {
+    padding: 80px 12px 40px;
+  }
+
+  .mdx-spotlight__item {
+    padding: 16px;
+  }
+
+  .mdx-showcase__item {
+    gap: 12px;
   }
 }

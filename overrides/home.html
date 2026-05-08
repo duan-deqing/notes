@@ -1,3 +1,4 @@
+<!--  Header -->
 {% extends "main.html" %} {% block tabs %} {{ super() }}
 
 <style>
@@ -26,20 +27,26 @@
   }
 
   .md-tabs {
-    position: absolute;
+    position: fixed;
     top: 48px;
     right: 0;
     left: 0;
     z-index: 3;
+    display: block !important;
+    width: 100%;
+    overflow: visible !important;
     background-color: transparent !important;
-    transition: background-color 0.3s ease;
+    opacity: var(--md-tabs-opacity, 1) !important;
   }
 
-  .md-tabs--scrolled {
-    background-color: var(--md-primary-fg-color) !important;
-    box-shadow:
-      0 0 4px rgba(0, 0, 0, 0.14),
-      0 4px 8px rgba(0, 0, 0, 0.28);
+  .md-tabs__link {
+    color: #ffffff !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    transition: color 0.2s ease;
+  }
+
+  .md-tabs__link:hover {
+    color: rgba(255, 255, 255, 0.85) !important;
   }
 
   .md-main__inner {
@@ -48,6 +55,12 @@
 
   .md-content {
     display: none;
+  }
+
+  @media screen and (max-width: 76.1875em) {
+    .md-tabs {
+      display: none !important;
+    }
   }
 
   @media screen and (min-width: 60em) {
@@ -61,8 +74,20 @@
       display: none;
     }
   }
+
+  @media screen and (min-width: 2000px) {
+    .md-tabs__list {
+      display: flex !important;
+      visibility: visible !important;
+    }
+
+    .md-tabs__item {
+      display: flex !important;
+    }
+  }
 </style>
 
+<!--  Hero -->
 <section class="mdx-container">
   <div class="mdx-hero">
     <div class="md-grid">
@@ -81,6 +106,7 @@
   </div>
 </section>
 
+<!--  Spotlight -->
 <section class="mdx-spotlight">
   <div class="md-grid md-typeset">
     <h2>探索笔记</h2>
@@ -162,6 +188,7 @@
   </div>
 </section>
 
+<!--  Showcase -->
 <section class="mdx-showcase">
   <div class="md-grid md-typeset">
     <h2>为什么选择这些笔记</h2>
@@ -234,6 +261,7 @@
   </div>
 </section>
 
+<!--  Trust -->
 <section class="mdx-trust">
   <div class="md-grid md-typeset">
     <h2>持续积累</h2>
@@ -244,6 +272,7 @@
   </div>
 </section>
 
+<!--  CTA -->
 <section class="mdx-cta">
   <div class="md-grid md-typeset">
     <div class="mdx-cta__content">
@@ -259,5 +288,7 @@
     </div>
   </div>
 </section>
+
+<!--  Footer -->
 {% endblock %} {% block content %}{% endblock %} {% block footer %} {{ super()
 }} {% endblock %}

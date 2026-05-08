@@ -114,11 +114,20 @@ nav:
   - Python:
       - Getting started: _notes/python/python-getting-started.md
   - RAG:
-      - Getting started: _notes/rag/rag-getting-started.md
+      - Getting started: _notes/rag/rag.md
   - Langchain:
       - Getting started: _notes/langchain/langchain-getting-started.md
   - React:
       - Getting started: _notes/react/react-getting-started.md
+  - 其他:
+      - Git: _notes/other/git-getting-started.md
+      - Markdown: _notes/other/markdown-getting-started.md
+  - 其他:
+      - Git: _notes/other/git-getting-started.md
+      - Markdown: _notes/other/markdown-getting-started.md
+  - 其他:
+      - Git: _notes/other/git-getting-started.md
+      - Markdown: _notes/other/markdown-getting-started.md
   - 其他:
       - Git: _notes/other/git-getting-started.md
       - Markdown: _notes/other/markdown-getting-started.md
