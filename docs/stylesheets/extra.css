@@ -714,12 +714,22 @@
     width: 20px;
     height: 20px;
   }
+  .highlight {
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    /* 如果代码块原本有圆角，保持视觉统一，可略微缩小圆角 */
+    border-radius: 10px !important;
+  }
 }
 
 /* 小平板 (481px-768px)：spotlight 两列 */
 @media (min-width: 481px) and (max-width: 768px) {
   .mdx-spotlight__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .md-typeset {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 }
 
@@ -735,5 +745,16 @@
 
   .mdx-showcase__item {
     gap: 12px;
+  }
+  .md-typeset .highlight {
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+  }
+}
+
+/* 覆盖代码块在小屏幕下的负边距，让它们和正文对齐 */
+@media screen and (max-width: 44.9844em) {
+  .md-content__inner > .highlight {
+    margin: 1em 0 !important;
   }
 }
