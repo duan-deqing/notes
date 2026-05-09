@@ -5,9 +5,9 @@ site_author: duan-deqing
 site_description: >-
   一个代码和咖啡因浓度差不多的地方。 这里没有正襟危坐的教科书，只有我踩过的坑、焊上的补丁，以及偶尔灵光一闪的“原来如此”。随便翻翻，希望你能笑着带走一句有用的话。
 
-# Repository 仓库
-repo_name: duan-deqing/notes
-repo_url: https://github.com/duan-deqing/notes
+# 显示Repository 仓库
+# repo_name: duan-deqing/notes
+# repo_url: https://github.com/duan-deqing/notes
 
 # Copyright
 copyright: Copyright &copy; 2026 STYLAN
@@ -56,9 +56,17 @@ theme:
         name: 切换至浅色模式
     # 浅色模式
     - media: "(prefers-color-scheme: light)"
+      # 可选的颜色
+      # - primary: 主色
+      # - accent: 强调色
+      # red        pink       purple     deep-purple
+      # indigo     blue       light-blue cyan
+      # teal       green      light-green lime
+      # yellow     amber      orange     deep-orange
+      # brown      grey       blue-grey  black white
       scheme: default
-      primary: blue
-      accent: blue
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/toggle-switch
         name: 切换至深色模式
