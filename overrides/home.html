@@ -17,8 +17,7 @@
     z-index: 4;
     background-color: transparent !important;
     box-shadow: none !important;
-    transition:
-      background-color var(--transition-speed) ease,
+    transition: background-color var(--transition-speed) ease,
       box-shadow var(--transition-speed) ease;
   }
 
@@ -89,7 +88,7 @@
   <div class="mdx-hero">
     <div class="md-grid">
       <div class="mdx-hero__content">
-        <h1>{{ page.meta.title | default(config.site_description) }}</h1>
+        <h1>{{ page.meta.title | default(config.site_name) }}</h1>
         <p>{{ config.site_description }}</p>
         <a
           href="{{ page.next_page.url | url }}"
