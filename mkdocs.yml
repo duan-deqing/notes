@@ -119,7 +119,7 @@ markdown_extensions:
 # 读取docs目录下的所有文件，生成导航
 nav:
   - 首页: index.md
-  - 关于: about.md
+  # - 关于: about.md
   - Python:
       - Getting started: _notes/python/python-getting-started.md
   - RAG:
