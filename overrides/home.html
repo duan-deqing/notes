@@ -2,24 +2,30 @@
 {% extends "main.html" %} {% block tabs %} {{ super() }}
 
 <style>
+  :root {
+    --header-height: 3.5rem;
+    --tabs-height: 3rem;
+    --transition-speed: 0.3s;
+    --shadow-light: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  }
+
   .md-header {
     position: fixed !important;
     top: 0;
     right: 0;
     left: 0;
     z-index: 4;
+    height: var(--header-height);
     background-color: transparent !important;
     box-shadow: none !important;
     transition:
-      background-color 0.3s ease,
-      box-shadow 0.3s ease;
+      background-color var(--transition-speed) ease,
+      box-shadow var(--transition-speed) ease;
   }
 
   .md-header--scrolled {
     background-color: var(--md-primary-fg-color) !important;
-    box-shadow:
-      0 0 4px rgba(0, 0, 0, 0.14),
-      0 4px 8px rgba(0, 0, 0, 0.28) !important;
+    box-shadow: var(--shadow-light) !important;
   }
 
   [data-md-color-scheme="slate"] .md-header--scrolled {
@@ -28,54 +34,98 @@
 
   .md-tabs {
     position: fixed;
-    top: 48px;
+    top: var(--header-height);
     right: 0;
     left: 0;
     z-index: 3;
     display: block !important;
-    width: 100%;
+    height: var(--tabs-height);
     overflow: visible !important;
     background-color: transparent !important;
     opacity: var(--md-tabs-opacity, 1) !important;
+    transition: opacity var(--transition-speed) ease;
   }
 
   .md-tabs__link {
     color: #ffffff !important;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
+    font-weight: 500;
   }
 
   .md-tabs__link:hover {
     color: rgba(255, 255, 255, 0.85) !important;
+    transform: translateY(-1px);
   }
 
   .md-main__inner {
     margin: 0;
+    min-height: calc(100vh - var(--header-height) - var(--tabs-height));
   }
 
   .md-content {
     display: none;
   }
 
-  @media screen and (max-width: 76.1875em) {
+  .md-footer {
+    display: none;
+  }
+
+  /* 响应式设计 - 统一使用rem单位 */
+  @media screen and (max-width: 48rem) {
+    /* 768px */
     .md-tabs {
       display: none !important;
     }
+
+    .mdx-hero__content {
+      padding: 2rem 1rem !important;
+      text-align: center;
+    }
+
+    .mdx-hero h1 {
+      font-size: 2.5rem !important;
+    }
+
+    .md-button {
+      width: 100%;
+      max-width: 20rem;
+      margin: 0 auto;
+    }
   }
 
-  @media screen and (min-width: 60em) {
+  @media screen and (min-width: 60rem) {
+    /* 960px */
     .md-sidebar--secondary {
       display: none;
     }
-  }
 
-  @media screen and (min-width: 76.25em) {
-    .md-sidebar--primary {
-      display: none;
+    .mdx-hero__content {
+      padding: 4rem 2rem !important;
+    }
+
+    .mdx-hero h1 {
+      font-size: 3.5rem !important;
     }
   }
 
-  @media screen and (min-width: 2000px) {
+  @media screen and (min-width: 76.25rem) {
+    /* 1220px */
+    .md-sidebar--primary {
+      display: none;
+    }
+
+    .mdx-hero__content {
+      padding: 5rem 3rem !important;
+    }
+
+    .mdx-hero h1 {
+      font-size: 4rem !important;
+    }
+  }
+
+  @media screen and (min-width: 125rem) {
+    /* 2000px */
     .md-tabs__list {
       display: flex !important;
       visibility: visible !important;
@@ -83,6 +133,43 @@
 
     .md-tabs__item {
       display: flex !important;
+    }
+
+    .mdx-hero__content {
+      padding: 6rem 4rem !important;
+    }
+
+    .mdx-hero h1 {
+      font-size: 4.5rem !important;
+    }
+  }
+
+  /* 移动端优化 */
+  @media screen and (max-width: 30rem) {
+    /* 480px */
+    .mdx-hero h1 {
+      font-size: 2rem !important;
+    }
+
+    .mdx-hero p {
+      font-size: 1.1rem !important;
+      line-height: 1.6;
+    }
+
+    .md-button {
+      padding: 0.75rem 1.5rem !important;
+      font-size: 1rem !important;
+    }
+  }
+
+  /* 平板优化 */
+  @media screen and (min-width: 30rem) and (max-width: 48rem) {
+    .mdx-hero__content {
+      padding: 3rem 1.5rem !important;
+    }
+
+    .mdx-hero h1 {
+      font-size: 3rem !important;
     }
   }
 </style>
@@ -106,189 +193,4 @@
   </div>
 </section>
 
-<!--  Spotlight -->
-<section class="mdx-spotlight">
-  <div class="md-grid md-typeset">
-    <h2>探索笔记</h2>
-    <div class="mdx-spotlight__grid">
-      <a
-        href="{{ '_notes/python/python-getting-started.md' | url }}"
-        class="mdx-spotlight__item"
-      >
-        <span class="mdx-spotlight__icon">
-          <span class="twemoji"
-            >{% include ".icons/fontawesome/brands/python.svg" %}</span
-          >
-        </span>
-        <h3>Python</h3>
-        <p>基础语法、函数、模块、调试等核心知识</p>
-      </a>
-
-      <a
-        href="{{ '_notes/rag/rag-getting-started.md' | url }}"
-        class="mdx-spotlight__item"
-      >
-        <span class="mdx-spotlight__icon">
-          <span class="twemoji">{% include ".icons/material/brain.svg" %}</span>
-        </span>
-        <h3>RAG</h3>
-        <p>检索增强生成技术，大模型应用开发</p>
-      </a>
-
-      <a
-        href="{{ '_notes/langchain/langchain-getting-started.md' | url }}"
-        class="mdx-spotlight__item"
-      >
-        <span class="mdx-spotlight__icon">
-          <span class="twemoji">{% include ".icons/material/link.svg" %}</span>
-        </span>
-        <h3>LangChain</h3>
-        <p>LangChain 框架学习，构建 LLM 应用</p>
-      </a>
-
-      <a
-        href="{{ '_notes/react/react-getting-started.md' | url }}"
-        class="mdx-spotlight__item"
-      >
-        <span class="mdx-spotlight__icon">
-          <span class="twemoji"
-            >{% include ".icons/fontawesome/brands/react.svg" %}</span
-          >
-        </span>
-        <h3>React</h3>
-        <p>React 前端框架学习笔记</p>
-      </a>
-
-      <a
-        href="{{ '_notes/other/git-getting-started.md' | url }}"
-        class="mdx-spotlight__item"
-      >
-        <span class="mdx-spotlight__icon">
-          <span class="twemoji"
-            >{% include ".icons/fontawesome/brands/git-alt.svg" %}</span
-          >
-        </span>
-        <h3>Git</h3>
-        <p>Git 版本控制实用技巧</p>
-      </a>
-
-      <a
-        href="{{ '_notes/other/markdown-getting-started.md' | url }}"
-        class="mdx-spotlight__item"
-      >
-        <span class="mdx-spotlight__icon">
-          <span class="twemoji"
-            >{% include ".icons/fontawesome/brands/markdown.svg" %}</span
-          >
-        </span>
-        <h3>Markdown</h3>
-        <p>Markdown 语法与写作技巧</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!--  Showcase -->
-<section class="mdx-showcase">
-  <div class="md-grid md-typeset">
-    <h2>为什么选择这些笔记</h2>
-    <div class="mdx-showcase__grid">
-      <div class="mdx-showcase__item">
-        <span class="mdx-showcase__icon"
-          >{% include ".icons/material/file-document.svg" %}</span
-        >
-        <div>
-          <h3>纯 Markdown 编写</h3>
-          <p>
-            专注于内容本身，无需了解 HTML、CSS 或 JavaScript，让 MkDocs Material
-            为你处理繁重的工作。
-          </p>
-        </div>
-      </div>
-
-      <div class="mdx-showcase__item">
-        <span class="mdx-showcase__icon"
-          >{% include ".icons/material/devices.svg" %}</span
-        >
-        <div>
-          <h3>全设备适配</h3>
-          <p>自动适配桌面、平板、手机等各种屏幕尺寸，随时随地查阅笔记。</p>
-        </div>
-      </div>
-
-      <div class="mdx-showcase__item">
-        <span class="mdx-showcase__icon"
-          >{% include ".icons/material/palette.svg" %}</span
-        >
-        <div>
-          <h3>高度可定制</h3>
-          <p>自由调整颜色、字体、图标、Logo 等，轻松打造个性化笔记站点。</p>
-        </div>
-      </div>
-
-      <div class="mdx-showcase__item">
-        <span class="mdx-showcase__icon"
-          >{% include ".icons/material/magnify.svg" %}</span
-        >
-        <div>
-          <h3>内置搜索</h3>
-          <p>零配置即可获得即时搜索能力，支持中文分词，搜索结果即时呈现。</p>
-        </div>
-      </div>
-
-      <div class="mdx-showcase__item">
-        <span class="mdx-showcase__icon"
-          >{% include ".icons/material/shield-check.svg" %}</span
-        >
-        <div>
-          <h3>完全掌控</h3>
-          <p>
-            拥有文档的完整源码和输出，保证数据完整性和安全性，无需依赖第三方平台。
-          </p>
-        </div>
-      </div>
-
-      <div class="mdx-showcase__item">
-        <span class="mdx-showcase__icon"
-          >{% include ".icons/material/github.svg" %}</span
-        >
-        <div>
-          <h3>开源驱动</h3>
-          <p>基于成熟活跃的开源技术构建，由全球开发者社区持续维护和改进。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--  Trust -->
-<section class="mdx-trust">
-  <div class="md-grid md-typeset">
-    <h2>持续积累</h2>
-    <p>
-      每一篇笔记都是学习路上的脚印。从 Python 基础到 RAG 应用，从 Git 技巧到
-      React 开发，这里记录着技术成长的每一步。
-    </p>
-  </div>
-</section>
-
-<!--  CTA -->
-<section class="mdx-cta">
-  <div class="md-grid md-typeset">
-    <div class="mdx-cta__content">
-      <h2>开始你的学习之旅</h2>
-      <p>持续更新中，记录每一个技术点滴</p>
-      <a
-        href="{{ page.next_page.url | url }}"
-        title="{{ page.next_page.title | e }}"
-        class="md-button md-button--primary"
-      >
-        立即开始
-      </a>
-    </div>
-  </div>
-</section>
-
-<!--  Footer -->
-{% endblock %} {% block content %}{% endblock %} {% block footer %} {{ super()
-}} {% endblock %}
+{% endblock %}
