@@ -80,13 +80,14 @@ theme:
         name: 切换至系统偏好
   # 字体设置
   font:
-    text: Roboto Mono, "Noto Sans SC"
-    code: Fira Code, Roboto Mono
+    text: Roboto Mono
+    code: Fira Code
   # 浏览器图标
   favicon: assets/favicon.ico
-  # # logo
-  # icon:
-  #   logo: logo
+  # 设置为logo是官方loge
+  # 可以使用路径选中自定义的
+  icon:
+    logo: logo
 
 # 额外配置
 extra:
@@ -123,20 +124,12 @@ nav:
   - Python:
       - Getting started: _notes/python/python-getting-started.md
   - RAG:
-      - Getting started: _notes/rag/rag.md
+      - RAG 实现原理: _notes/rag/rag-getting-started.md
   - Langchain:
       - Getting started: _notes/langchain/langchain-getting-started.md
   - React:
       - Getting started: _notes/react/react-getting-started.md
   - 其他:
-      - Git: _notes/other/git-getting-started.md
-      - Markdown: _notes/other/markdown-getting-started.md
-  - 其他:
-      - Git: _notes/other/git-getting-started.md
-      - Markdown: _notes/other/markdown-getting-started.md
-  - 其他:
-      - Git: _notes/other/git-getting-started.md
-      - Markdown: _notes/other/markdown-getting-started.md
-  - 其他:
-      - Git: _notes/other/git-getting-started.md
-      - Markdown: _notes/other/markdown-getting-started.md
+      - Linux: _notes/other/linux.md
+      - Git: _notes/other/git.md
+      - Markdown: _notes/other/markdown.md
