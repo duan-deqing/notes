@@ -41,6 +41,7 @@ document$.subscribe(function () {
       header.classList.remove("md-header--scrolled");
     }
 
+    // 滚动时淡入tabs
     if (tabs) {
       var fadeEnd = heroHeight * 0.8;
       if (scrollY <= 0) {

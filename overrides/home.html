@@ -3,7 +3,7 @@
 
 <style>
   :root {
-    --header-height: 3.5rem;
+    --header-height: 2.4rem;
     --tabs-height: 3rem;
     --transition-speed: 0.3s;
     --shadow-light: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
@@ -15,12 +15,15 @@
     right: 0;
     left: 0;
     z-index: 4;
-    height: var(--header-height);
     background-color: transparent !important;
     box-shadow: none !important;
     transition:
       background-color var(--transition-speed) ease,
       box-shadow var(--transition-speed) ease;
+  }
+
+  .md-header__inner {
+    height: 100%;
   }
 
   .md-header--scrolled {
@@ -39,11 +42,9 @@
     left: 0;
     z-index: 3;
     display: block !important;
-    height: var(--tabs-height);
     overflow: visible !important;
     background-color: transparent !important;
     opacity: var(--md-tabs-opacity, 1) !important;
-    transition: opacity var(--transition-speed) ease;
   }
 
   .md-tabs__link {
@@ -58,118 +59,27 @@
     transform: translateY(-1px);
   }
 
-  .md-main__inner {
-    margin: 0;
-    min-height: calc(100vh - var(--header-height) - var(--tabs-height));
+  .mdx-container {
+    min-height: calc(100vh - var(--header-height));
+  }
+
+  .mdx-section {
+    min-height: calc(100vh - var(--header-height));
   }
 
   .md-content {
     display: none;
   }
 
-  .md-footer {
+  /*.md-footer {
     display: none;
   }
+  */
 
-  /* 响应式设计 - 统一使用rem单位 */
-  @media screen and (max-width: 48rem) {
-    /* 768px */
+  /* 屏幕nav 适配 */
+  @media screen and (max-width: 1220px) {
     .md-tabs {
       display: none !important;
-    }
-
-    .mdx-hero__content {
-      padding: 2rem 1rem !important;
-      text-align: center;
-    }
-
-    .mdx-hero h1 {
-      font-size: 2.5rem !important;
-    }
-
-    .md-button {
-      width: 100%;
-      max-width: 20rem;
-      margin: 0 auto;
-    }
-  }
-
-  @media screen and (min-width: 60rem) {
-    /* 960px */
-    .md-sidebar--secondary {
-      display: none;
-    }
-
-    .mdx-hero__content {
-      padding: 4rem 2rem !important;
-    }
-
-    .mdx-hero h1 {
-      font-size: 3.5rem !important;
-    }
-  }
-
-  @media screen and (min-width: 76.25rem) {
-    /* 1220px */
-    .md-sidebar--primary {
-      display: none;
-    }
-
-    .mdx-hero__content {
-      padding: 5rem 3rem !important;
-    }
-
-    .mdx-hero h1 {
-      font-size: 4rem !important;
-    }
-  }
-
-  @media screen and (min-width: 125rem) {
-    /* 2000px */
-    .md-tabs__list {
-      display: flex !important;
-      visibility: visible !important;
-    }
-
-    .md-tabs__item {
-      display: flex !important;
-    }
-
-    .mdx-hero__content {
-      padding: 6rem 4rem !important;
-    }
-
-    .mdx-hero h1 {
-      font-size: 4.5rem !important;
-    }
-  }
-
-  /* 移动端优化 */
-  @media screen and (max-width: 30rem) {
-    /* 480px */
-    .mdx-hero h1 {
-      font-size: 2rem !important;
-    }
-
-    .mdx-hero p {
-      font-size: 1.1rem !important;
-      line-height: 1.6;
-    }
-
-    .md-button {
-      padding: 0.75rem 1.5rem !important;
-      font-size: 1rem !important;
-    }
-  }
-
-  /* 平板优化 */
-  @media screen and (min-width: 30rem) and (max-width: 48rem) {
-    .mdx-hero__content {
-      padding: 3rem 1.5rem !important;
-    }
-
-    .mdx-hero h1 {
-      font-size: 3rem !important;
     }
   }
 </style>
@@ -179,18 +89,26 @@
   <div class="mdx-hero">
     <div class="md-grid">
       <div class="mdx-hero__content">
-        <h1>{{ page.meta.title | default(config.site_name) }}</h1>
+        <h1>{{ page.meta.title | default(config.site_description) }}</h1>
         <p>{{ config.site_description }}</p>
         <a
           href="{{ page.next_page.url | url }}"
           title="{{ page.next_page.title | e }}"
           class="md-button md-button--primary"
         >
-          开始阅读
+          开始学习
         </a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Section -->
+<section class="mdx-section">
+  <div class="mdx-second-page">
+    <div class="md-grid">
+      <div class="mdx-section__content"></div>
+    </div>
+  </div>
+</section>
 {% endblock %}

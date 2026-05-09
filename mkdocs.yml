@@ -3,7 +3,7 @@ site_name: STYLAN's Notes
 site_url: https://duan-deqing.github.io/notes/
 site_author: duan-deqing
 site_description: >-
-  我的学习笔记
+  一个代码和咖啡因浓度差不多的地方。 这里没有正襟危坐的教科书，只有我踩过的坑、焊上的补丁，以及偶尔灵光一闪的“原来如此”。随便翻翻，希望你能笑着带走一句有用的话。
 
 # Repository 仓库
 repo_name: duan-deqing/notes
@@ -72,7 +72,7 @@ theme:
         name: 切换至系统偏好
   # 字体设置
   font:
-    text: "Noto Sans SC"
+    text: Roboto Mono, "Noto Sans SC"
     code: Fira Code, Roboto Mono
   # 浏览器图标
   favicon: assets/favicon.ico
@@ -112,7 +112,6 @@ markdown_extensions:
 nav:
   - 首页: index.md
   - 关于: about.md
-  - 测试footer: test-footer.md
   - Python:
       - Getting started: _notes/python/python-getting-started.md
   - RAG:

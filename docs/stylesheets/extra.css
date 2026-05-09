@@ -393,11 +393,7 @@
 
 :root {
   --mdx-hero-bg: url("../assets/1-landscape@3x.avif");
-}
-
-.mdx-container {
-  position: relative;
-  overflow: hidden;
+  --second-page-bg: url("../assets/second-1.png");
 }
 
 .mdx-hero {
@@ -413,6 +409,22 @@
   background-position: center;
   background-repeat: no-repeat;
   background-color: #2d2d2d;
+}
+
+.mdx-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.mdx-section {
+  position: relative;
+  overflow: hidden;
+  background-image: var(--second-page-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #2d2d2d;
+  margin-top: 4.8rem;
 }
 
 .mdx-hero::before {
@@ -670,87 +682,6 @@
 /* ============================================
    首页 - 响应式
    ============================================ */
-
-/* 中等桌面 (≤1220px)：spotlight 两列 */
-@media (max-width: 76.25em) {
-  .mdx-spotlight__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* 平板横屏 (≤960px)：showcase 单列 */
-@media (max-width: 60em) {
-  .mdx-showcase__grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* 平板竖屏 (≤768px) */
-@media (max-width: 768px) {
-  .mdx-hero {
-    padding: 100px 16px 60px;
-  }
-
-  .mdx-spotlight__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .mdx-spotlight__icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .mdx-spotlight__icon .twemoji {
-    width: 20px;
-    height: 20px;
-  }
-
-  .mdx-showcase__icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .mdx-showcase__icon .twemoji {
-    width: 20px;
-    height: 20px;
-  }
-  .highlight {
-    margin-left: 16px !important;
-    margin-right: 16px !important;
-    /* 如果代码块原本有圆角，保持视觉统一，可略微缩小圆角 */
-    border-radius: 10px !important;
-  }
-}
-
-/* 小平板 (481px-768px)：spotlight 两列 */
-@media (min-width: 481px) and (max-width: 768px) {
-  .mdx-spotlight__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .md-typeset {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-}
-
-/* 小手机 (≤480px) */
-@media (max-width: 480px) {
-  .mdx-hero {
-    padding: 80px 12px 40px;
-  }
-
-  .mdx-spotlight__item {
-    padding: 16px;
-  }
-
-  .mdx-showcase__item {
-    gap: 12px;
-  }
-  .md-typeset .highlight {
-    margin-left: 16px !important;
-    margin-right: 16px !important;
-  }
-}
 
 /* 覆盖代码块在小屏幕下的负边距，让它们和正文对齐 */
 @media screen and (max-width: 44.9844em) {
