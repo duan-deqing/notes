@@ -6,9 +6,8 @@ body,
 .md-header__inner,
 .md-nav,
 .md-footer {
-  font-family:
-    "Noto Sans SC", "Source Han Sans", "system-ui", "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans SC", "Source Han Sans", "system-ui", "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* ============================================
@@ -51,8 +50,7 @@ body,
   --hl-meta: #a0a1a7;
   --hl-tag: #e45649;
   --hl-punctuation: #383a42;
-  --code-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.06),
+  --code-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.06),
     0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
@@ -88,8 +86,7 @@ body,
   --hl-meta: #859289;
   --hl-tag: #a7c080;
   --hl-punctuation: #d3c6aa;
-  --code-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.25),
+  --code-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.25),
     0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
@@ -133,9 +130,7 @@ body,
   height: 12px;
   border-radius: 6px;
   background-color: #ff5f57;
-  box-shadow:
-    20px 0 0 #febc2e,
-    40px 0 0 #28c840;
+  box-shadow: 20px 0 0 #febc2e, 40px 0 0 #28c840;
   z-index: 2;
   pointer-events: none;
 }
@@ -608,4 +603,12 @@ body,
   .md-content__inner > .highlight {
     margin: 1em 0 !important;
   }
+}
+
+/* ============================================
+   Mermaid 图表居中对齐
+   ============================================ */
+.mermaid {
+  display: flex;
+  justify-content: center;
 }
