@@ -105,6 +105,9 @@ extra_css:
 # 自定义主题配置
 extra_javascript:
   - javascripts/extra.js
+  - javascripts/mermaid-config.js
+  - javascripts/mathjax.js # (2) 你的配置文件，路径稍后解释
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js # (3) MathJax CDN
 
 # Extensions 扩展
 markdown_extensions:
@@ -117,9 +120,16 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - admonition
   - pymdownx.details
+  # 数学公式
+  - pymdownx.arithmatex:
+      generic: true # (1) 启用通用模式
 
 plugins:
   - git-revision-date-localized:

@@ -13,3 +13,12 @@ if __name__ == '__main__':
 # 最基本的python代码
 print("Hello World!")
 ```
+
+```mermaid { "theme": "base", "themeVariables": { "primaryColor": "#ff0000" } }
+graph TD;
+    A-->B;
+```
+
+$$
+\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+$$
