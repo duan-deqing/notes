@@ -94,6 +94,9 @@ extra:
   status:
     new: Recently added
     deprecated: Deprecated
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/duan-deqing
 
 # 自定义 CSS
 extra_css:
@@ -115,6 +118,14 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+
+plugins:
+  - git-revision-date-localized:
+      type: timeago # 显示为"3 days ago"等动态格式
+      locale: zh # 使用中文显示
+      enable_creation_date: true # 启用创建日期的显示
 
 # Navigation 导航
 # 读取docs目录下的所有文件，生成导航
@@ -127,8 +138,8 @@ nav:
       - RAG 实现原理: _notes/rag/rag-getting-started.md
   - Langchain:
       - Getting started: _notes/langchain/langchain-getting-started.md
-  - React:
-      - Getting started: _notes/react/react-getting-started.md
+  - Prompt:
+      - 风格化图片生成: _notes/prompt/风格化图片生成.md
   - 其他:
       - Linux: _notes/other/linux.md
       - Git: _notes/other/git.md

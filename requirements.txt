@@ -7,3 +7,4 @@ mkdocs-material
 # markdown extensions
 pymdown-extensions
 pygments
+mkdocs-git-revision-date-localized

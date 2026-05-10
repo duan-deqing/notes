@@ -40,20 +40,14 @@ cd notes
 pip install -r requirements.txt
 
 # 启动开发服务器
-mkdocs serve
+mkdocs serve --livereload
 
 # 访问 http://localhost:8000
 ```
 
-### 构建静态文件
-
-```bash
-mkdocs build
-```
-
 ## 📁 项目结构
 
-```
+```txt
 notes/
 ├── docs/                 # 文档目录
 │   ├── index.md         # 首页
@@ -90,7 +84,7 @@ notes/
 ## 📞 联系方式
 
 - GitHub: [@duan-deqing](https://github.com/duan-deqing)
-- 邮箱: duan_deqing@163.com
+- 邮箱: duan-deqing@foxmail.com
 
 ---
 
