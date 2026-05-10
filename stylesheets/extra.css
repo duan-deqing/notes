@@ -1,0 +1,597 @@
+/* ============================================
+   全局字体
+   ============================================ */
+body,
+.md-typeset,
+.md-header__inner,
+.md-nav,
+.md-footer {
+  font-family:
+    "Noto Sans SC", "Source Han Sans", "system-ui", "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+/* ============================================
+   自定义鼠标光标
+   ============================================ */
+
+/* * {
+  cursor: url("../assets/cursor/millennium_base.cur"), auto;
+} */
+
+/* ============================================
+   浅色模式（默认）- Field Light
+   ============================================ */
+:root {
+  --code-bg: #ffffff;
+  --code-border: #e0dcc8;
+  --code-text: #383a42;
+  --code-titlebar-bg: #f5f5f5;
+  --code-titlebar-border: rgba(0, 0, 0, 0.06);
+  --code-line-number: #a0a1a7;
+  --code-highlight-line: rgba(64, 120, 242, 0.1);
+  --code-highlight-border: #4078f2;
+
+  /* 语法高亮颜色 */
+  --hl-keyword: #e45649;
+  --hl-builtin: #986801;
+  --hl-type: #c18401;
+  --hl-function: #0184bc;
+  --hl-string: #50a14f;
+  --hl-number: #986801;
+  --hl-comment: #a0a1a7;
+  --hl-operator: #383a42;
+  --hl-name: #383a42;
+  --hl-attr: #4078f2;
+  --hl-decorator: #a626a4;
+  --hl-regex: #50a14f;
+  --hl-variable: #e45649;
+  --hl-constant: #986801;
+  --hl-class: #c18401;
+  --hl-meta: #a0a1a7;
+  --hl-tag: #e45649;
+  --hl-punctuation: #383a42;
+  --code-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.06),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================
+   深色模式 - Everforest Dark
+   ============================================ */
+[data-md-color-scheme="slate"] {
+  --code-bg: #2d353b;
+  --code-border: #3a4248;
+  --code-text: #d3c6aa;
+  --code-titlebar-bg: #272e33;
+  --code-titlebar-border: rgba(255, 255, 255, 0.06);
+  --code-line-number: #859289;
+  --code-highlight-line: rgba(219, 188, 127, 0.15);
+  --code-highlight-border: #dbbc7f;
+
+  /* 语法高亮颜色 */
+  --hl-keyword: #e67e80;
+  --hl-builtin: #e69875;
+  --hl-type: #dbbc7f;
+  --hl-function: #7fbbb3;
+  --hl-string: #a7c080;
+  --hl-number: #e69875;
+  --hl-comment: #859289;
+  --hl-operator: #e67e80;
+  --hl-name: #d3c6aa;
+  --hl-attr: #7fbbb3;
+  --hl-decorator: #d699b6;
+  --hl-regex: #a7c080;
+  --hl-variable: #d3c6aa;
+  --hl-constant: #e69875;
+  --hl-class: #dbbc7f;
+  --hl-meta: #859289;
+  --hl-tag: #a7c080;
+  --hl-punctuation: #d3c6aa;
+  --code-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.25),
+    0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* ============================================
+   代码块容器样式
+   ============================================ */
+.highlight {
+  background-color: var(--code-bg) !important;
+  border-radius: 12px;
+  box-shadow: var(--code-shadow);
+  position: relative;
+  padding-top: 24px;
+}
+
+/* ============================================
+   代码块标题栏装饰
+   ============================================ */
+.highlight::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: var(--code-titlebar-bg);
+  border-bottom: 1px solid var(--code-titlebar-border);
+  border-radius: 11px 11px 0 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ============================================
+   Mac 风格窗口按钮
+   ============================================ */
+.highlight::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #ff5f57;
+  box-shadow:
+    20px 0 0 #febc2e,
+    40px 0 0 #28c840;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ============================================
+   代码内容样式
+   ============================================ */
+.highlight code {
+  padding-top: 50px;
+  font-family: "Fira Code", "Maple Mono NF", monospace;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--code-text) !important;
+  background-color: var(--code-bg) !important;
+  border-radius: 0 0 12px 12px !important;
+}
+
+/* ============================================
+   代码行号
+   ============================================ */
+.highlight .lineno {
+  color: var(--code-line-number);
+  user-select: none;
+}
+
+/* ============================================
+   高亮行
+   ============================================ */
+.highlight .hll {
+  background-color: var(--code-highlight-line);
+  box-shadow: inset 3px 0 0 var(--code-highlight-border);
+}
+
+/* ============================================
+   语法高亮 - 关键字
+   ============================================ */
+.highlight .k {
+  color: var(--hl-keyword);
+}
+.highlight .kc {
+  color: var(--hl-keyword);
+}
+.highlight .kd {
+  color: var(--hl-keyword);
+}
+.highlight .kn {
+  color: var(--hl-keyword);
+}
+.highlight .kp {
+  color: var(--hl-keyword);
+}
+.highlight .kr {
+  color: var(--hl-keyword);
+}
+.highlight .kt {
+  color: var(--hl-type);
+}
+
+/* ============================================
+   语法高亮 - 名称
+   ============================================ */
+.highlight .n {
+  color: var(--hl-name);
+}
+.highlight .na {
+  color: var(--hl-attr);
+}
+.highlight .nb {
+  color: var(--hl-builtin);
+}
+.highlight .nc {
+  color: var(--hl-class);
+}
+.highlight .no {
+  color: var(--hl-constant);
+}
+.highlight .nd {
+  color: var(--hl-decorator);
+}
+.highlight .ni {
+  color: var(--hl-constant);
+}
+.highlight .ne {
+  color: var(--hl-function);
+}
+.highlight .nf {
+  color: var(--hl-function);
+}
+.highlight .nl {
+  color: var(--hl-name);
+}
+.highlight .nn {
+  color: var(--hl-name);
+}
+.highlight .nx {
+  color: var(--hl-name);
+}
+.highlight .py {
+  color: var(--hl-name);
+}
+.highlight .nt {
+  color: var(--hl-tag);
+}
+.highlight .nv {
+  color: var(--hl-variable);
+}
+.highlight .vc {
+  color: var(--hl-variable);
+}
+.highlight .vg {
+  color: var(--hl-variable);
+}
+.highlight .vi {
+  color: var(--hl-variable);
+}
+.highlight .bp {
+  color: var(--hl-builtin);
+}
+
+/* ============================================
+   语法高亮 - 字符串
+   ============================================ */
+.highlight .s {
+  color: var(--hl-string);
+}
+.highlight .sa {
+  color: var(--hl-string);
+}
+.highlight .sb {
+  color: var(--hl-string);
+}
+.highlight .sc {
+  color: var(--hl-string);
+}
+.highlight .dl {
+  color: var(--hl-string);
+}
+.highlight .sd {
+  color: var(--hl-string);
+}
+.highlight .s2 {
+  color: var(--hl-string);
+}
+.highlight .se {
+  color: var(--hl-string);
+}
+.highlight .sh {
+  color: var(--hl-string);
+}
+.highlight .si {
+  color: var(--hl-string);
+}
+.highlight .sx {
+  color: var(--hl-string);
+}
+.highlight .sr {
+  color: var(--hl-regex);
+}
+.highlight .s1 {
+  color: var(--hl-string);
+}
+.highlight .ss {
+  color: var(--hl-string);
+}
+
+/* ============================================
+   语法高亮 - 数字
+   ============================================ */
+.highlight .m {
+  color: var(--hl-number);
+}
+.highlight .mb {
+  color: var(--hl-number);
+}
+.highlight .mf {
+  color: var(--hl-number);
+}
+.highlight .mh {
+  color: var(--hl-number);
+}
+.highlight .mi {
+  color: var(--hl-number);
+}
+.highlight .mo {
+  color: var(--hl-number);
+}
+.highlight .il {
+  color: var(--hl-number);
+}
+
+/* ============================================
+   语法高亮 - 注释
+   ============================================ */
+.highlight .c {
+  color: var(--hl-comment);
+}
+.highlight .cm {
+  color: var(--hl-comment);
+}
+.highlight .cp {
+  color: var(--hl-comment);
+}
+.highlight .c1 {
+  color: var(--hl-comment);
+}
+.highlight .cs {
+  color: var(--hl-comment);
+}
+
+/* ============================================
+   语法高亮 - 操作符
+   ============================================ */
+.highlight .o {
+  color: var(--hl-operator);
+}
+.highlight .ow {
+  color: var(--hl-operator);
+}
+
+/* ============================================
+   语法高亮 - 其他
+   ============================================ */
+.highlight .w {
+  color: var(--hl-punctuation);
+}
+.highlight .p {
+  color: var(--hl-punctuation);
+}
+.highlight .ge {
+  font-style: italic;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gh {
+  color: var(--hl-comment);
+}
+.highlight .gu {
+  color: var(--hl-comment);
+}
+.highlight .gd {
+  color: var(--hl-keyword);
+}
+.highlight .gi {
+  color: var(--hl-tag);
+}
+.highlight .gr {
+  color: var(--hl-keyword);
+}
+.highlight .gt {
+  color: var(--hl-keyword);
+}
+.highlight .err {
+  color: var(--hl-keyword);
+}
+
+/* ============================================
+   行内代码样式
+   ============================================ */
+.md-typeset code {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  font-family: "Fira Code", "Maple Mono NF", monospace;
+  font-size: 0.85em;
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================
+   正文行距
+   ============================================ */
+.md-typeset {
+  line-height: 1.6;
+}
+
+/* ============================================
+   目录行距
+   ============================================ */
+.md-nav--secondary .md-nav__link {
+  line-height: 1.6;
+}
+
+/* ============================================
+   全局选中文字颜色
+   ============================================ */
+::selection {
+  background: rgba(231, 37, 102, 0.5);
+  color: #ffffff;
+}
+
+/* ============================================
+   首页 Hero 区域（全屏背景图）
+   替换背景图：将你的图片放入 docs/assets/ 目录，
+   修改下方 --mdx-hero-bg 变量为你的图片路径即可
+   当前使用占位 SVG，可直接替换为 JPG/PNG/WebP
+   ============================================ */
+
+:root {
+  --mdx-hero-bg: url("../assets/1-landscape@3x.avif");
+  --second-page-bg: url("../assets/second-1.png");
+}
+
+.mdx-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  min-height: 100dvh;
+  height: 100dvh;
+  padding: clamp(80px, 10vh, 140px) 16px clamp(40px, 6vh, 80px);
+  background-image: var(--mdx-hero-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #2d2d2d;
+}
+
+.mdx-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.mdx-section {
+  position: relative;
+  overflow: hidden;
+  background-image: var(--second-page-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #2d2d2d;
+  margin-top: 4.8rem;
+}
+
+.mdx-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+}
+/* ============================================
+   首页 - 第二页（内容区域）
+   ============================================ */
+.mdx-second-page {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--header-height));
+  padding: clamp(40px, 6vh, 80px) 16px;
+}
+
+.mdx-section__content {
+  max-width: 100dvh;
+  color: #ffffff;
+  text-align: center;
+  background: rgba(200, 200, 200, 0.3);
+  border-radius: 1.2rem;
+  padding: clamp(2rem, 4vw, 3.5rem);
+}
+
+.mdx-section__content h2 {
+  font-size: clamp(2.2em, 3.5vw, 3em);
+  font-weight: 700;
+  margin-bottom: 1em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.mdx-section__content p {
+  font-size: clamp(1.15em, 1.6vw, 1.35em);
+  line-height: 1.8;
+  margin-bottom: 1em;
+  opacity: 0.92;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mdx-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  z-index: 1;
+}
+
+.mdx-hero .md-grid {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.mdx-hero__content {
+  max-width: 600px;
+  color: #ffffff;
+  padding-bottom: clamp(20px, 4vh, 40px);
+}
+
+.mdx-hero__content h1 {
+  font-size: 5em;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  color: currentColor;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.mdx-hero__content p {
+  font-size: 1.6em;
+  margin: 0 0 2em;
+  line-height: 1.6;
+  opacity: 0.9;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mdx-hero .md-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 9em;
+  height: 3.5em;
+  font-size: 1.6em;
+  padding: 0;
+  border-radius: 0.25em;
+}
+
+.mdx-hero .md-button--primary {
+  background-color: rgb(221, 46, 87);
+  border-color: rgb(221, 46, 87);
+  color: var(--md-primary-bg-color);
+}
+
+.mdx-hero .md-button--primary:hover {
+  background-color: rgba(221, 46, 87, 0.85);
+  border-color: rgba(221, 46, 87, 0.85);
+}
+
+/* ============================================
+   首页 - 响应式
+   ============================================ */
+
+/* 覆盖代码块在小屏幕下的负边距，让它们和正文对齐 */
+@media screen and (max-width: 44.9844em) {
+  .md-content__inner > .highlight {
+    margin: 1em 0 !important;
+  }
+}
