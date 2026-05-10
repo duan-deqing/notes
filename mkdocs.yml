@@ -136,6 +136,7 @@ nav:
       - Getting started: _notes/python/python-getting-started.md
   - RAG:
       - RAG 实现原理: _notes/rag/rag-getting-started.md
+      - RAG 递归到评估: _notes/rag/rag-questions-recursive-to-evaluation.md
   - Langchain:
       - Getting started: _notes/langchain/langchain-getting-started.md
   - Prompt:

@@ -6,7 +6,9 @@ body,
 .md-header__inner,
 .md-nav,
 .md-footer {
-  font-family: "Roboto Mono", "Noto Sans SC", sans-serif;
+  font-family:
+    "Noto Sans SC", "Source Han Sans", "system-ui", "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
 }
 
 /* ============================================
@@ -119,7 +121,9 @@ body,
   z-index: 1;
 }
 
-/* Mac 风格窗口按钮 */
+/* ============================================
+   Mac 风格窗口按钮
+   ============================================ */
 .highlight::before {
   content: "";
   position: absolute;
@@ -480,7 +484,9 @@ body,
   );
   z-index: 1;
 }
-
+/* ============================================
+   首页 - 第二页（内容区域）
+   ============================================ */
 .mdx-second-page {
   position: relative;
   z-index: 2;
@@ -577,195 +583,6 @@ body,
 .mdx-hero .md-button--primary:hover {
   background-color: rgba(221, 46, 87, 0.85);
   border-color: rgba(221, 46, 87, 0.85);
-}
-
-/* ============================================
-   首页 - 探索笔记（Spotlight 卡片网格）
-   ============================================ */
-.mdx-spotlight {
-  padding: clamp(40px, 6vh, 80px) 16px clamp(30px, 4vh, 60px);
-}
-
-.mdx-spotlight h2 {
-  text-align: center;
-  font-size: clamp(1.4em, 2.5vw, 1.8em);
-  margin-bottom: 1.5em;
-  font-weight: 700;
-}
-
-.mdx-spotlight__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.mdx-spotlight__item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: clamp(16px, 2vw, 24px);
-  border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 8px;
-  text-decoration: none;
-  color: var(--md-default-fg-color);
-  transition:
-    border-color 0.2s,
-    box-shadow 0.2s;
-}
-
-.mdx-spotlight__item:hover {
-  border-color: var(--md-primary-fg-color);
-  box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.1),
-    0 4px 8px rgba(0, 0, 0, 0.06);
-  color: var(--md-default-fg-color);
-  text-decoration: none;
-}
-
-.mdx-spotlight__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  margin-bottom: 16px;
-  border-radius: 8px;
-  background-color: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
-}
-
-.mdx-spotlight__icon .twemoji {
-  width: 24px;
-  height: 24px;
-}
-
-.mdx-spotlight__item h3 {
-  margin: 0 0 8px;
-  font-size: 1.1em;
-  font-weight: 700;
-}
-
-.mdx-spotlight__item p {
-  margin: 0;
-  font-size: 0.85em;
-  color: var(--md-default-fg-color--light);
-  line-height: 1.6;
-}
-
-/* ============================================
-   首页 - 为什么选择（Showcase 列表）
-   ============================================ */
-.mdx-showcase {
-  padding: clamp(40px, 5vh, 60px) 16px clamp(40px, 6vh, 80px);
-  background-color: var(--md-default-fg-color--lightest);
-}
-
-.mdx-showcase h2 {
-  text-align: center;
-  font-size: clamp(1.4em, 2.5vw, 1.8em);
-  margin-bottom: 1.5em;
-  font-weight: 700;
-}
-
-.mdx-showcase__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(16px, 2vw, 24px);
-}
-
-.mdx-showcase__item {
-  display: flex;
-  gap: clamp(12px, 1.5vw, 20px);
-  align-items: flex-start;
-}
-
-.mdx-showcase__icon {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: rgba(63, 81, 181, 0.1);
-  color: var(--md-primary-fg-color);
-}
-
-.mdx-showcase__icon .twemoji {
-  width: 24px;
-  height: 24px;
-}
-
-.mdx-showcase__item h3 {
-  margin: 0 0 6px;
-  font-size: 1.05em;
-  font-weight: 700;
-}
-
-.mdx-showcase__item p {
-  margin: 0;
-  font-size: 0.9em;
-  color: var(--md-default-fg-color--light);
-  line-height: 1.6;
-}
-
-/* ============================================
-   首页 - 持续积累（Trust 居中文本）
-   ============================================ */
-.mdx-trust {
-  padding: clamp(40px, 6vh, 80px) 16px;
-  text-align: center;
-}
-
-.mdx-trust h2 {
-  font-size: clamp(1.4em, 2.5vw, 1.8em);
-  margin-bottom: 0.8em;
-  font-weight: 700;
-}
-
-.mdx-trust p {
-  max-width: clamp(300px, 80%, 700px);
-  margin: 0 auto;
-  font-size: clamp(0.9em, 1.2vw, 1.05em);
-  color: var(--md-default-fg-color--light);
-  line-height: 1.6;
-}
-
-/* ============================================
-   首页 - 底部 CTA（Call to Action 按钮）
-   ============================================ */
-.mdx-cta {
-  padding: clamp(40px, 6vh, 80px) 16px;
-  background-color: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
-  text-align: center;
-}
-
-/* 标题样式 */
-.mdx-cta__content h2 {
-  font-size: clamp(1.1em, 2.5vw, 1.8em);
-  margin-bottom: 0.5em;
-  font-weight: 700;
-}
-/* 段落样式 */
-.mdx-cta__content p {
-  font-size: clamp(0.95em, 1.3vw, 1.1em);
-  opacity: 0.85;
-  margin-bottom: 2em;
-}
-/* 按钮样式 */
-.mdx-cta .md-button--primary {
-  font-size: 0.85em;
-  padding: 0.8em 2.5em;
-  border-radius: 0.4em;
-  background-color: var(--md-primary-bg-color);
-  border-color: var(--md-primary-bg-color);
-  color: var(--md-primary-fg-color);
-}
-/* 按钮悬停样式 */
-.mdx-cta .md-button--primary:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-color: rgba(255, 255, 255, 0.8);
 }
 
 /* ============================================
