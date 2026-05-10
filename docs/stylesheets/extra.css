@@ -408,10 +408,24 @@ body,
 }
 
 /* ============================================
-   正文行距
+   统一正文行距
    ============================================ */
 .md-typeset {
   line-height: 1.6;
+}
+
+.md-typeset p,
+.md-typeset li,
+.md-typeset blockquote,
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6,
+.md-typeset th,
+.md-typeset td {
+  line-height: 1.8;
 }
 
 /* ============================================
@@ -515,7 +529,7 @@ body,
 
 .mdx-section__content p {
   font-size: clamp(1.15em, 1.6vw, 1.35em);
-  line-height: 1.8;
+  line-height: 1.6;
   margin-bottom: 1em;
   opacity: 0.92;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
