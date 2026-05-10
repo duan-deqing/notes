@@ -8,4 +8,3 @@ mkdocs-material
 pymdown-extensions
 pygments
 mkdocs-git-revision-date-localized-plugin
-mkdocs-i18n

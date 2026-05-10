@@ -111,25 +111,54 @@ extra_javascript:
 
 # Extensions 扩展
 markdown_extensions:
+  - abbr
+  - admonition
   - attr_list
+  - def_list
+  - footnotes
   - md_in_html
-  # 代码高亮
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  # mermaid 图表
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - admonition
-  - pymdownx.details
-  # 数学公式
-  - pymdownx.arithmatex:
-      generic: true # (1) 启用通用模式
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 plugins:
   - git-revision-date-localized:
@@ -143,7 +172,10 @@ nav:
   - 首页: index.md
   # - 关于: about.md
   - Python:
-      - Getting started: _notes/python/python-getting-started.md
+      - 快速开始: _notes/python/01-快速开始.md
+      - 变量与基本数据类型: _notes/python/02-变量与基本数据类型.md
+      - 容器类型一：列表与元组: _notes/python/03-容器类型一列表与元组.md
+      - 容器类型二：字典与集合: _notes/python/04-容器类型二字典与集合.md
   - RAG:
       - RAG 实现原理: _notes/rag/rag-getting-started.md
       - RAG 递归到评估: _notes/rag/rag-questions-recursive-to-evaluation.md
