@@ -123,7 +123,7 @@ markdown_extensions:
 
 plugins:
   - git-revision-date-localized:
-      type: timeago # 显示为"3 days ago"等动态格式
+      type: timeago # 显示为动态格式
       locale: zh # 使用中文显示
       enable_creation_date: true # 启用创建日期的显示
 
