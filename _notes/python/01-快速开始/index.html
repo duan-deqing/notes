@@ -12,13 +12,13 @@
         <meta name="author" content="duan-deqing">
       
       
-        <link rel="canonical" href="https://duan-deqing.github.io/notes/_notes/rag/rag-questions-recursive-to-evaluation/">
+        <link rel="canonical" href="https://duan-deqing.github.io/notes/_notes/python/01-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B/">
       
       
-        <link rel="prev" href="../rag-getting-started/">
+        <link rel="prev" href="../../..">
       
       
-        <link rel="next" href="../../langchain/langchain-getting-started/">
+        <link rel="next" href="../02-%E5%8F%98%E9%87%8F%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>RAG 递归到评估 - STYLAN's Notes</title>
+        <title>快速开始 - STYLAN's Notes</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rag" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RAG 递归到评估
+              快速开始
             
           </span>
         </div>
@@ -209,11 +209,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../python/01-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -231,13 +233,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../rag-getting-started/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../rag/rag-getting-started/" class="md-tabs__link">
           
   
   
@@ -386,8 +386,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -403,19 +405,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -433,7 +438,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -448,10 +453,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../python/01-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速开始
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -467,6 +499,215 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安装 Python
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="安装 Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        验证安装
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        版本管理工具
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行第一个程序
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="运行第一个程序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        编写代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行程序
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pep8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注释、缩进与PEP8
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="注释、缩进与PEP8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注释
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        缩进
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pep8_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PEP8初识
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PEP8初识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        命名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        空格
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        每行长度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        导入
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        空白行
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -479,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/02-%E5%8F%98%E9%87%8F%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
+      <a href="../02-%E5%8F%98%E9%87%8F%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
         
   
   
@@ -507,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/03-%E5%AE%B9%E5%99%A8%E7%B1%BB%E5%9E%8B%E4%B8%80%E5%88%97%E8%A1%A8%E4%B8%8E%E5%85%83%E7%BB%84/" class="md-nav__link">
+      <a href="../03-%E5%AE%B9%E5%99%A8%E7%B1%BB%E5%9E%8B%E4%B8%80%E5%88%97%E8%A1%A8%E4%B8%8E%E5%85%83%E7%BB%84/" class="md-nav__link">
         
   
   
@@ -535,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/04-%E5%AE%B9%E5%99%A8%E7%B1%BB%E5%9E%8B%E4%BA%8C%E5%AD%97%E5%85%B8%E4%B8%8E%E9%9B%86%E5%90%88/" class="md-nav__link">
+      <a href="../04-%E5%AE%B9%E5%99%A8%E7%B1%BB%E5%9E%8B%E4%BA%8C%E5%AD%97%E5%85%B8%E4%B8%8E%E9%9B%86%E5%90%88/" class="md-nav__link">
         
   
   
@@ -567,10 +808,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -582,22 +821,19 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -615,7 +851,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -633,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rag-getting-started/" class="md-nav__link">
+      <a href="../../rag/rag-getting-started/" class="md-nav__link">
         
   
   
@@ -658,37 +894,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    RAG 递归到评估
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../rag/rag-questions-recursive-to-evaluation/" class="md-nav__link">
         
   
   
@@ -704,153 +913,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#rat" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        一、先来个开胃菜：RAT 里的递归到底是个啥？
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rag_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        二、RAG 里的混合检索：不是二选一，是“我全都要”
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        三、专业领域翻车了？先别骂大模型，检查这三个地方
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rag_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        四、端到端考核：哪个指标最能代表 RAG 的良心？
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        五、重排序：那个不起眼但能救命的模块
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rag-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        六、RAG 背后隐藏的现代 AI 设计哲学
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        七、检索器 vs 生成器：各举一个优化小妙招
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="七、检索器 vs 生成器：各举一个优化小妙招">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        检索器优化：混合检索 + 重排序
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        生成器优化：上下文压缩
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rag_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        八、为什么评估 RAG 不能只看最终答案准确性？
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rag_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        尾声：RAG 像一个“开卷考试”的好学生
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1223,99 +1285,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rat" class="md-nav__link">
+  <a href="#python" class="md-nav__link">
     <span class="md-ellipsis">
       
-        一、先来个开胃菜：RAT 里的递归到底是个啥？
+        安装 Python
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rag_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        二、RAG 里的混合检索：不是二选一，是“我全都要”
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        三、专业领域翻车了？先别骂大模型，检查这三个地方
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rag_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        四、端到端考核：哪个指标最能代表 RAG 的良心？
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="安装 Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        五、重排序：那个不起眼但能救命的模块
+        验证安装
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#rag-ai" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        六、RAG 背后隐藏的现代 AI 设计哲学
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        七、检索器 vs 生成器：各举一个优化小妙招
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="七、检索器 vs 生成器：各举一个优化小妙招">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        检索器优化：混合检索 + 重排序
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        生成器优化：上下文压缩
+        版本管理工具
       
     </span>
   </a>
@@ -1328,24 +1324,152 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rag_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        八、为什么评估 RAG 不能只看最终答案准确性？
+        运行第一个程序
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="运行第一个程序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        编写代码
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#rag_4" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        尾声：RAG 像一个“开卷考试”的好学生
+        运行程序
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pep8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注释、缩进与PEP8
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="注释、缩进与PEP8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注释
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        缩进
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pep8_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PEP8初识
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PEP8初识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        命名
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        空格
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        每行长度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        导入
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        空白行
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1366,109 +1490,126 @@
 
 
 
-<h1 id="rag">RAG 系统修炼手册：从递归思想到评估体系的灵魂拷问<a class="headerlink" href="#rag" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>一位 AI 工程师的自问自答笔记</p>
-</blockquote>
-<p>各位读者朋友，大家好。最近我把自己折腾 RAG（检索增强生成）系统时遇到的那些“灵魂拷问”整理了一下，发现它们竟然串成了一条完整的技术链路。今天就把这份带着体温的笔记分享出来，希望能帮你少掉几根头发。</p>
-<h2 id="rat">一、先来个开胃菜：RAT 里的递归到底是个啥？<a class="headerlink" href="#rat" title="Permanent link">&para;</a></h2>
-<p>有朋友问：RAT（递归抽象类型）的核心思想“递归”体现在哪？其实特别简单——<strong>自己定义自己</strong>。就像俄罗斯套娃，你打开一个，里面还有一个同款。</p>
-<p>列表就是最经典的例子：<code>List = 空 | 元素 + 另一个List</code>。有了这种自指，我们就能用有限行代码描述无限长的数据。递归函数也是同理：大事化小，小事化了，直到碰到那个“不能再拆了”的基础条件。</p>
-<blockquote>
-<p>人话：递归就是“从前有座山，山里有座庙，庙里有个老和尚在讲故事，讲的啥？从前有座山……”</p>
-</blockquote>
-<h2 id="rag_1">二、RAG 里的混合检索：不是二选一，是“我全都要”<a class="headerlink" href="#rag_1" title="Permanent link">&para;</a></h2>
-<p>很多刚上手的朋友会纠结：检索到底用关键词（BM25）还是向量（语义嵌入）？</p>
-<p>答案是：<strong>成年人两个都要</strong>。</p>
-<ul>
-<li><strong>关键词检索</strong>：像查字典，专治各种专有名词、精确短语。你说“Transformer”，它绝不敢给你“变形金刚”。</li>
-<li><strong>向量检索</strong>：像找灵魂伴侣，能理解同义词。你搜“怎么减肥”，它知道“体重管理”“卡路里控制”都是相关。</li>
-</ul>
-<p>两者加权融合，就像可乐加冰——快乐加倍。这叫**混合检索**，是当前 RAG 的标配。</p>
-<h2 id="_1">三、专业领域翻车了？先别骂大模型，检查这三个地方<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>如果 RAG 在某个专业领域（比如法律、医疗）总答错，<strong>第一枪请瞄准检索环节</strong>。原因很朴素：没找到对的资料，再牛的生成器也变不出正确答案。</p>
-<p>排查三步走：</p>
+<h1 id="_1">快速开始<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="python">安装 Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
+<p>访问<a href="https://www.python.org/">Python官网</a>进行下载最新的稳定版，安装过程的几个关键点：</p>
 <ol>
-<li><strong>召回测试</strong>：搜一个你明知有答案的问题，看看检索出来的片段里有没有正确答案。如果没有，问题在索引或分块。</li>
-<li><strong>知识库体检</strong>：有没有把该领域的文档放进去？版本对不对？别笑，我见过用旧版说明书查新产品故障的。</li>
-<li><strong>分块姿势</strong>：专业文档常有大表格、代码块、公式——一刀切按字数分块，好比把乐高拆散再拼，结构全没了。</li>
+<li>正确选择安装包，一般都是选择64-bit版本的，具体根据实际情况选择。</li>
+<li>勾选<code>Add Python to PATH</code>，这一步是将<code>Python</code>安装目录和里面的<code>Scrips</code>添加到**系统环境变量**，这确保你能在终端中直接输入<code>python</code>运行。</li>
+<li>安装路径建议是保持默认，但一般可以放在自己的开发环境目录，统一管理。</li>
 </ol>
-<p>如果召回没问题但答案依然胡说，再去看生成环节。</p>
-<h2 id="rag_2">四、端到端考核：哪个指标最能代表 RAG 的良心？<a class="headerlink" href="#rag_2" title="Permanent link">&para;</a></h2>
-<p>很多人脱口而出“答案准确率”。但这个指标太模糊了——它没告诉我：到底是没搜到，还是搜到了但模型没看懂？</p>
-<p><strong>最应该关注的综合性指标是：忠实度（Faithfulness）</strong>。</p>
-<p>简单说，就是**答案是不是严格基于检索出来的那片上下文**。模型有没有自己脑补？有没有明明资料没提，它说“根据资料，……”？这些都是不忠实。</p>
-<p>忠实度是 RAG 区别于纯 LLM 瞎编的根本——你拿外部知识库当着它的面，它还撒谎，那这系统就是“睁眼说瞎话”。所以，评估时请把忠实度放在第一位。</p>
-<h2 id="_2">五、重排序：那个不起眼但能救命的模块<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>检索流程里，初筛（比如向量检索）通常会一股脑拉回几十个片段，但排序比较粗糙。这时候就需要**重排序模块**上场。</p>
-<p>它像一个挑剔的选品师：用更精准的模型（比如交叉编码器）对每个片段重新打分，把最相关的顶到前几名，把无关的踢出局。</p>
-<p>效果有三：</p>
+<h3 id="_2">验证安装<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>打开终端(Windows: Powershell / CMD; MacOS/Linux： Terminal)，输入：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="_2-windows" name="__tabbed_1" type="radio" /><input id="_2-macos--linux" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="_2-windows">Windows</label><label for="_2-macos--linux">MacOS / Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="sb">`</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>python<span class="w"> </span>--version
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="sb">`</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>python3<span class="w"> </span>--version
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>显示出类似 Python 3.12.3 的信息，则表示安装成功。若提示“不是内部或外部命令”，请检查 PATH 配置。</p>
+<h3 id="_3">版本管理工具<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">为什么要版本管理工具？</p>
+<p>当你的电脑上同时存在多个 Python 项目，且它们需要不同的 Python 版本时，手动切换会非常痛苦。</p>
+</div>
+<p>主流的Python版本管理方案有下面两种：</p>
 <ul>
-<li>减少喂给大模型的“噪音”</li>
-<li>消除多路检索（BM25+向量）的分数偏差</li>
-<li>提升答案忠实度</li>
+<li><strong>pyenv</strong> : 轻量级，可以为每个目录设定独立的 Python 版本，使用命令行切换比较方便。</li>
+<li><strong>Anaconda / Miniconda</strong> : 集成了 Python、conda 包管理器和大量常用科学包，虚拟环境管理功能强大。</li>
 </ul>
-<blockquote>
-<p>类比：相亲平台先按学历年龄初筛出100个，然后红娘挨个聊天、深度匹配，最后只推荐3个最合适的。重排序就是那个红娘。</p>
-</blockquote>
-<h2 id="rag-ai">六、RAG 背后隐藏的现代 AI 设计哲学<a class="headerlink" href="#rag-ai" title="Permanent link">&para;</a></h2>
-<p>从系统架构上看，RAG 只做对了一件事：<strong>关注点分离</strong>。</p>
-<ul>
-<li>模型只管**生成**（怎么把话说漂亮）</li>
-<li>检索管**知识**（从哪找事实）</li>
-</ul>
-<p>二者解耦，各司其职。你想升级模型，换 GPT-4 就行；你想更新知识，直接换向量库，不用重训模型。这就是**知识外部化**——不再把知识硬编码进模型的神经网络参数里，而是放在外面，随时查、随时换。</p>
-<p>这体现了现代 AI 系统从“巨无霸单体模型”向“模型 + 服务 + 工具”组合演进的趋势。说白了：<strong>不要把所有鸡蛋放在一个参数篮子里</strong>。</p>
-<h2 id="vs">七、检索器 vs 生成器：各举一个优化小妙招<a class="headerlink" href="#vs" title="Permanent link">&para;</a></h2>
-<h3 id="_3">检索器优化：混合检索 + 重排序<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>前面提过了，这是黄金组合。先用 BM25 和向量双路召回，再用重排序模型精排。效果立竿见影。</p>
-<h3 id="_4">生成器优化：上下文压缩<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>检索回来的片段经常很长，里面掺杂着废话。可以先用一个小模型（或者简单摘要提示词）把关键句子提炼出来，再喂给大模型。这能大幅提高“信噪比”，减少幻觉，还能省钱（省 token）。</p>
-<blockquote>
-<p>想象一下：你问大模型“如何煮鸡蛋”，检索回来一长篇《鸡蛋的200种做法》。你先把“冷水下锅，煮8分钟”这10个字摘出来，再扔给它——它想跑题都难。</p>
-</blockquote>
-<h2 id="rag_3">八、为什么评估 RAG 不能只看最终答案准确性？<a class="headerlink" href="#rag_3" title="Permanent link">&para;</a></h2>
-<p>这是很多人踩过的坑：上线一个 RAG，测了100个问题，准确率80%，然后不知道下一步改哪。</p>
-<p><strong>你需要单独评估“检索质量”</strong>（比如召回率、MRR）。为什么？</p>
-<p>因为答案不准确可能有两个完全不同的病因：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">情况</th>
-<th style="text-align: left;">检索质量</th>
-<th style="text-align: left;">生成质量</th>
-<th style="text-align: left;">最终答案</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">没搜到相关文档</td>
-<td style="text-align: left;">差</td>
-<td style="text-align: left;">好</td>
-<td style="text-align: left;">错</td>
-</tr>
-<tr>
-<td style="text-align: left;">搜到了但模型没读懂</td>
-<td style="text-align: left;">好</td>
-<td style="text-align: left;">差</td>
-<td style="text-align: left;">错</td>
-</tr>
-</tbody>
-</table>
-<p>如果你只测最终准确性，你就不知道是去优化向量库，还是去改提示词。独立评估检索质量，就像给系统照 X 光——看清病灶在骨头还是肉里。</p>
-<p>二者关系一句话：<strong>检索质量是天花板，生成质量是把天花板变现的能力</strong>。检索差，生成再好也白搭；检索好，生成不行还有救。</p>
-<h2 id="rag_4">尾声：RAG 像一个“开卷考试”的好学生<a class="headerlink" href="#rag_4" title="Permanent link">&para;</a></h2>
-<p>最后，我们来回顾一下 RAG 的基本原理，用一个比喻收尾：</p>
-<ul>
-<li><strong>索引</strong>：把所有参考书整理成可快速查找的卡片目录。</li>
-<li><strong>检索</strong>：看到考卷题目，立刻去翻卡片，找出相关几页。</li>
-<li><strong>生成</strong>：照着找来的这几页内容，用自己的话写出答案。</li>
-</ul>
-<p><strong>它为什么能缓解大模型幻觉？</strong>
-因为传统大模型是“闭卷考试”——全靠记忆，记错了就瞎编。RAG 是“开卷考试”——直接给你参考材料，照着答就行。只要材料对，答案就很难离谱。而且答案可溯源，你说“根据资料第3段”，别人一查就知道是不是胡诌。</p>
-<p>所以，下次你的 RAG 系统翻车了，请默念三遍：<strong>先查检索，再看生成，忠实度是命</strong>。</p>
 <hr />
-<p>好了，今天的技术唠嗑就到这。如果你也在踩 RAG 的坑，欢迎留言交流。咱们下期见！👋</p>
+<h2 id="_4"><strong>运行第一个程序</strong><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>编写一个 python 程序，再终端输出 <code>Hello World!</code></p>
+<h3 id="_5">编写代码<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>用任意文本编辑器（如 VS Code、Sublime Text，甚至记事本）新建一个文件，命名为 hello.py，输入下面这一行代码：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="_6">运行程序<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>打开终端，切换到文件所在目录，执行：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>hello.py
+</span></code></pre></div>
+<details class="note">
+<summary>终端会输出</summary>
+<p>Hello, World!</p>
+</details>
+<hr />
+<h2 id="pep8">注释、缩进与PEP8<a class="headerlink" href="#pep8" title="Permanent link">&para;</a></h2>
+<h3 id="_7">注释<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>单行注释</strong> : 用井号 <code>#</code> 开头，从 <code>#</code> 开始到行尾均被视为注释。</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># 这是一条注释</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># 这也能写注释</span>
+</span></code></pre></div>
+<ul>
+<li><strong>多行注释</strong> : Python 没有专门的多行注释符号，通常使用由三个引号（单引号或双引号）括起来的多行字符串来充当。</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="sd">这是多行注释的常规写法。</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="sd">可以跨越多行。</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="sd">&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">注意</p>
+<p>严格来说它是个未赋值给变量的字符串常量，解释器会生成它然后丢弃。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">注释的原则</p>
+<p>注释应该解释 “为什么”（Why）这样做，而不是 “是什么”（What）。代码本身应该清晰到足以说明做了什么。对于复杂的算法、业务逻辑、临时解决措施，写上注释是一种美德；对一目了然的操作画蛇添足则是噪声。</p>
+</div>
+<h3 id="_8">缩进<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>大多数编程语言使用花括号 <code>{}</code> 或 <code>begin/end</code> 关键字来划分代码块，而 Python 用缩进。这是一个强制性的语法要求：同一代码块内的语句必须有相同的缩进长度，通常约定使用4个空格。</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;正数&quot;</span><span class="p">)</span>      <span class="c1"># 缩进4个空格，表示 if 块的一部分</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;非正数&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>缩进必须是“一致”的，不能混合使用 Tab 和空格。</p>
+</div>
+<h2 id="pep8_1">PEP8初识<a class="headerlink" href="#pep8_1" title="Permanent link">&para;</a></h2>
+<p>PEP 是“Python Enhancement Proposal”（Python 增强提案）的缩写，其中 PEP 8 是 Python 社区公认的编码风格指南。它不是强制规范，但遵循它能让你的代码与绝大多数 Python 程序员保持一致的风格，提高可读性和可维护性。以下是几个初学就要注意的点：</p>
+<h3 id="_9"><strong>命名</strong><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>变量名、函数名</strong>：小写字母，单词间用下划线连接（user_name、calculate_area）</li>
+<li>常量：全大写字母，用下划线连接（MAX_SIZE、DEFAULT_HOST）</li>
+<li>类名：骆驼命名法，即每个单词首字母大写（DataLoader、HttpClient）</li>
+</ul>
+<h3 id="_10"><strong>空格</strong><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>逗号、冒号后加一个空格，前面不加。</li>
+<li>运算符两边各加一个空格：<code>a = b + c</code> 而不是 <code>a=b+c</code>。</li>
+<li>函数名与左括号之间不加空格：<code>print(x)</code>，不是 <code>print (x)</code>。</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">3</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="_11"><strong>每行长度</strong><a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>建议最长不超过 79 个字符，文档字符串或注释不超过 72 个字符。可以续行时用小括号、中括号或反斜杠。</p>
+<h3 id="_12"><strong>导入</strong><a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>每个导入独占一行，按“标准库 -&gt; 第三方库 -&gt; 本地库”分组，每组之间空一行。</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># 标准库</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># 第三方库</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="kn">from</span><span class="w"> </span><span class="o">&lt;</span><span class="n">第三方库</span><span class="o">&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">xxxx</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># 本地库</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="kn">from</span><span class="w"> </span><span class="o">&lt;</span><span class="n">本地库</span><span class="o">&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">xxx</span>
+</span></code></pre></div>
+<h3 id="_13"><strong>空白行</strong><a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>顶层函数和类定义之间用两个空行分隔；类内方法定义之间用一个空行分隔。</p>
 
 
 
@@ -1491,7 +1632,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年5月10日 16:30:05 UTC"><span class="timeago" datetime="2026-05-10T16:30:05+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年5月10日 16:30:05 UTC">2026-05-10</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年5月10日 22:48:35 UTC"><span class="timeago" datetime="2026-05-10T22:48:35+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年5月10日 22:48:35 UTC">2026-05-10</span>
   </span>
 
     
@@ -1501,7 +1642,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年5月10日 16:30:05 UTC"><span class="timeago" datetime="2026-05-10T16:30:05+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年5月10日 16:30:05 UTC">2026-05-10</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年5月10日 22:48:35 UTC"><span class="timeago" datetime="2026-05-10T22:48:35+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年5月10日 22:48:35 UTC">2026-05-10</span>
   </span>
 
     
@@ -1536,7 +1677,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../rag-getting-started/" class="md-footer__link md-footer__link--prev" aria-label="Previous: RAG 实现原理">
+          <a href="../../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: 首页">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1546,20 +1687,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                RAG 实现原理
+                首页
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../langchain/langchain-getting-started/" class="md-footer__link md-footer__link--next" aria-label="Next: Getting started">
+          <a href="../02-%E5%8F%98%E9%87%8F%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="md-footer__link md-footer__link--next" aria-label="Next: 变量与基本数据类型">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Getting started
+                变量与基本数据类型
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://duan-deqing.github.io/notes/_notes/rag/rag-getting-started/">
       
       
-        <link rel="prev" href="../../python/python-getting-started/">
+        <link rel="prev" href="../../python/04-%E5%AE%B9%E5%99%A8%E7%B1%BB%E5%9E%8B%E4%BA%8C%E5%AD%97%E5%85%B8%E4%B8%8E%E9%9B%86%E5%90%88/">
       
       
         <link rel="next" href="../rag-questions-recursive-to-evaluation/">
@@ -213,7 +213,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../python/python-getting-started/" class="md-tabs__link">
+        <a href="../../python/01-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B/" class="md-tabs__link">
           
   
   
@@ -393,6 +393,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -445,14 +451,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/python-getting-started/" class="md-nav__link">
+      <a href="../../python/01-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Getting started
+    快速开始
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/02-%E5%8F%98%E9%87%8F%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    变量与基本数据类型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/03-%E5%AE%B9%E5%99%A8%E7%B1%BB%E5%9E%8B%E4%B8%80%E5%88%97%E8%A1%A8%E4%B8%8E%E5%85%83%E7%BB%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    容器类型一：列表与元组
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/04-%E5%AE%B9%E5%99%A8%E7%B1%BB%E5%9E%8B%E4%BA%8C%E5%AD%97%E5%85%B8%E4%B8%8E%E9%9B%86%E5%90%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    容器类型二：字典与集合
   
 
     
@@ -1410,7 +1500,7 @@
 
 
 
-<h1 id="rag">RAG 实现原理</h1>
+<h1 id="rag">RAG 实现原理<a class="headerlink" href="#rag" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p>为什么要 RAG（Retrieval‑Augmented Generation）?
 传统的 AI 大模型完全依赖其内部记忆（训练时学到的知识），这就导致两个问题：</p>
@@ -1419,14 +1509,14 @@
 <li>产生幻觉：遇到不懂的问题时，可能会编造一个看似合理但错误的答案。</li>
 </ul>
 </blockquote>
-<h2 id="0">0 引言</h2>
-<h3 id="01">0.1 核心定义</h3>
+<h2 id="0">0 引言<a class="headerlink" href="#0" title="Permanent link">&para;</a></h2>
+<h3 id="01">0.1 核心定义<a class="headerlink" href="#01" title="Permanent link">&para;</a></h3>
 <p>最基础的 RAG（检索增强生成）原理，可以用一个形象的类比来理解：让 AI 在回答问题时，允许它先“上网搜一下资料”或者“翻一下教科书”，再根据搜到的内容进行回答。</p>
 <p>从本质上讲，RAG（Retrieval-Augmented Generation）是一种旨在解决大语言模型（LLM）“知其然不知其所以然”问题的技术范式。它的核心是将模型内部学到的“<strong>参数化知识</strong>”（模型权重中固化的、模糊的“记忆”），与来自外部知识库的“<strong>非参数化知识</strong>”（精准、可随时更新的外部数据）相结合。其运作逻辑就是在 LLM 生成文本前，先通过检索机制从外部知识库中动态获取相关信息，并将这些“参考资料”融入生成过程，从而提升输出的准确性和时效性。</p>
 <blockquote>
 <p>💡 一句话总结：RAG 就是让 LLM 学会了“开卷考试”，它既能利用自己学到的知识，也能随时查阅外部资料。</p>
 </blockquote>
-<h3 id="02">0.2 技术原理</h3>
+<h3 id="02">0.2 技术原理<a class="headerlink" href="#02" title="Permanent link">&para;</a></h3>
 <p>简单的概括原理，最基础的 RAG 由以下几部分构成：</p>
 <ul>
 <li><strong>知识向量化</strong>：先把你的知识切成小段（chunk），算成向量，存入“向量数据库”（这一步叫建索引/ indexing）；</li>
@@ -1454,7 +1544,7 @@
    <p>图 1-1 RAG 双阶段架构示意图</p>
 </div>
 
-<h3 id="03">0.3 技术演进分类</h3>
+<h3 id="03">0.3 技术演进分类<a class="headerlink" href="#03" title="Permanent link">&para;</a></h3>
 <p>RAG 的技术架构经历了从简单到复杂的演进，如下图所示 大致可分为三个阶段</p>
 <p><img alt="图 1-2 RAG 技术演进分类" src="../images/1_1_2.png" /></p>
 <p>这三个阶段的具体对比如表 1-1 所示。</p>
@@ -1504,12 +1594,12 @@
 <li>检索：用户提问时，把问题也变成向量，从向量库中检索出最相似的几段</li>
 <li>生成：把检索到的内容和问题一起拼成提示词，送给大模型生成回答。</li>
 </ol>
-<h2 id="1-indexing">1 离线：建索引 Indexing</h2>
+<h2 id="1-indexing">1 离线：建索引 Indexing<a class="headerlink" href="#1-indexing" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>核心：文档加载、文本分块、向量化、存储</p>
 </blockquote>
-<h3 id="11">1.1 文档加载</h3>
-<p>RAG 系统中，<strong>数据加载</strong>是整个流水线的第一步，也是不可或缺的一步。</p>
+<h3 id="11">1.1 文档加载<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>RAG 系统中，**数据加载**是整个流水线的第一步，也是不可或缺的一步。</p>
 <p>在这一部分会使用到文档加载器：文档加载器负责将各种格式的非结构化文档（如 PDF、Word、Markdown、HTML 等）转换为程序可以处理的结构化数据。数据加载的质量会直接影响后续的索引构建、检索效果和最终的生成质量。</p>
 <p>文档加载器在 RAG 的数据管道中一般需要完成三个核心任务：</p>
 <ul>
@@ -1585,9 +1675,9 @@
 </div>
 
 <p><a href="https://datawhalechina.github.io/all-in-rag/#/chapter2/04_data_load">参考链接 - 数据加载</a></p>
-<h3 id="12-chunkingsplitting">1.2 文本分块 Chunking/Splitting</h3>
+<h3 id="12-chunkingsplitting">1.2 文本分块 Chunking/Splitting<a class="headerlink" href="#12-chunkingsplitting" title="Permanent link">&para;</a></h3>
 <p><strong>理解什么是文档分块</strong></p>
-<p>文本分块（Text Chunking）是构建 RAG 流程的关键步骤。它的原理是将加载后的长篇文档，切分成更小、更易于处理的单元。这些被切分出的文本块，是后续向量检索和模型处理的<strong>基本单位</strong>。</p>
+<p>文本分块（Text Chunking）是构建 RAG 流程的关键步骤。它的原理是将加载后的长篇文档，切分成更小、更易于处理的单元。这些被切分出的文本块，是后续向量检索和模型处理的**基本单位**。</p>
 <p><img alt="文本分块示意图 - 由ChunkViz工具生成" src="../images/2_2_1.webp" /></p>
 <p><strong>文本分块的重要性</strong></p>
 <ol>
@@ -1596,7 +1686,7 @@
 <p>将文本分块的首要原因，是为了适应 RAG 系统中两个核心组件的硬性限制：</p>
 <ul>
 <li>
-<p><strong>嵌入模型 (Embedding Model)</strong>: 负责将文本块转换为向量。这类模型有严格的输入长度上限。例如，许多常用的嵌入模型（如 <code>bge-base-zh-v1.5</code>）的上下文窗口为 512 个 token。任何超出此限制的文本块在输入时都会被截断，导致信息丢失，生成的向量也无法完整代表原文的语义。因此，文本块的大小<strong>必须</strong>小于等于嵌入模型的上下文窗口。</p>
+<p><strong>嵌入模型 (Embedding Model)</strong>: 负责将文本块转换为向量。这类模型有严格的输入长度上限。例如，许多常用的嵌入模型（如 <code>bge-base-zh-v1.5</code>）的上下文窗口为 512 个 token。任何超出此限制的文本块在输入时都会被截断，导致信息丢失，生成的向量也无法完整代表原文的语义。因此，文本块的大小**必须**小于等于嵌入模型的上下文窗口。</p>
 </li>
 <li>
 <p><strong>大语言模型 (LLM)</strong>: 负责根据检索到的上下文生成答案。LLM 同样有上下文窗口限制（尽管通常比嵌入模型大得多，从几千到上百万 token 不等）。检索到的所有文本块，连同用户问题和提示词，都必须能被放入这个窗口中。如果单个块过大，可能会导致只能容纳少数几个相关的块，限制了 LLM 回答问题时可参考的信息广度。</p>
@@ -1637,7 +1727,7 @@
 <p>ChunkViz：简易的可视化分块工具</p>
 </li>
 </ul>
-<h3 id="13-embedding">1.3 向量化（向量嵌入） Embedding</h3>
+<h3 id="13-embedding">1.3 向量化（向量嵌入） Embedding<a class="headerlink" href="#13-embedding" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p><strong>什么是 Embedding</strong></p>
 <p>向量嵌入（Embedding）是一种将真实世界中复杂、高维的数据对象（如文本、图像、音频、视频等）转换为数学上易于处理的、低维、稠密的连续数值向量的技术。</p>
@@ -1689,7 +1779,7 @@
 <p>（1）<strong>确定基线 (Baseline)</strong> ：根据上述维度，选择几个符合要求的模型作为你的初始基准模型。</p>
 <p>（2）<strong>构建私有评测集</strong> ：根据真实业务数据，手动创建一批高质量的评测样本，每个样本包含一个典型用户问题和它对应的标准答案（或最相关的文档块）。</p>
 <p>（3）<strong>迭代优化</strong> ： - 使用基线模型在你的私有评测集上运行，评估其召回的准确率和相关性。 - 如果效果不理想，可以尝试更换模型，或者调整 RAG 流程的其他环节（如文本分块策略）。 - 通过几轮的对比测试和迭代优化，最终选出在你的特定场景下表现最佳的那个“心仪”模型。</p>
-<h3 id="14-vector-store">1.4 存入向量数据库（建索引） Vector Store</h3>
+<h3 id="14-vector-store">1.4 存入向量数据库（建索引） Vector Store<a class="headerlink" href="#14-vector-store" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>向量数据库 = 向量存储 + 元数据存储 + 高性能相似索引</p>
 </blockquote>
@@ -1733,7 +1823,7 @@
 <li>对应的元数据</li>
 </ul>
 <p><strong>向量数据库的作用</strong></p>
-<p>向量数据库的核心价值在于其<strong>高效处理海量高维向量</strong>的能力。主要功能可以简单概括为以下几点：</p>
+<p>向量数据库的核心价值在于其**高效处理海量高维向量**的能力。主要功能可以简单概括为以下几点：</p>
 <p>高效的相似性搜索、高维数据存储与管理、丰富的查询能力、可扩展与高可用、数据与模型生态集成；</p>
 <p><a href="https://datawhalechina.github.io/all-in-rag/#/chapter3/08_vector_db">参考链接-向量数据库-1</a></p>
 <p><strong>主流向量数据库介绍</strong></p>
@@ -1761,21 +1851,21 @@
 <li><strong>新手入门/小型项目</strong>：从 <code>ChromaDB</code> 或 <code>FAISS</code> 开始是最佳选择。它们与 LangChain/LlamaIndex 紧密集成，几行代码就能运行，且能满足基本的存储和检索需求。</li>
 <li><strong>生产环境/大规模应用</strong>：当数据量超过百万级，或需要高并发、实时更新、复杂元数据过滤时，应考虑更专业的解决方案，如 <code>Milvus</code>、<code>Weaviate</code> 或云服务 <code>Pinecone</code>。</li>
 </ul>
-<h2 id="2-query">2 在线：查询 Query</h2>
+<h2 id="2-query">2 在线：查询 Query<a class="headerlink" href="#2-query" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>核心：查询嵌入、检索、生成</p>
 </blockquote>
-<h3 id="21-embedding">2.1 查询向量化 Embedding</h3>
+<h3 id="21-embedding">2.1 查询向量化 Embedding<a class="headerlink" href="#21-embedding" title="Permanent link">&para;</a></h3>
 <ul>
 <li>把用户的<code>question</code>用同一个嵌入模型(embedding 模型)算成向量<code>q_vec</code>=&gt;<code>(query_vector)</code>（关键：必须和建索引用的是同一个模型）；</li>
 </ul>
-<h3 id="22-retrieval-top-k">2.2 检索 (Retrieval) - Top-K 相似向量</h3>
+<h3 id="22-retrieval-top-k">2.2 检索 (Retrieval) - Top-K 相似向量<a class="headerlink" href="#22-retrieval-top-k" title="Permanent link">&para;</a></h3>
 <ul>
 <li>在向量库中，计算 <code>q_vec</code> 与所有 <code>chunk</code> 向量的相似度（常用余弦相似度、内积等）。</li>
 <li>取"最相似的 K 个"（Top‑K），比如 K 一般取 3 ~ 5。</li>
 <li>返回这些“最相似”的 chunk 向量，即：[向量 1，向量 2，...，向量 k]</li>
 </ul>
-<h3 id="23-prompt-context-augment">2.3 构造提示词 Prompt / (Context Augment)</h3>
+<h3 id="23-prompt-context-augment">2.3 构造提示词 Prompt / (Context Augment)<a class="headerlink" href="#23-prompt-context-augment" title="Permanent link">&para;</a></h3>
 <ul>
 <li>把检索到的内容拼成“上下文”（context）：</li>
 </ul>
@@ -1786,14 +1876,14 @@
 <ul>
 <li>目的是让大模型"看着材料回答问题"，而不是只靠自己的记忆。这部分就是 augmented(增强的)。</li>
 </ul>
-<h3 id="24-generation-">2.4 调用大模型生成回答 (Generation) - 大语言模型</h3>
+<h3 id="24-generation-">2.4 调用大模型生成回答 (Generation) - 大语言模型<a class="headerlink" href="#24-generation-" title="Permanent link">&para;</a></h3>
 <ul>
 <li>把完整的提示词 prompt 交给大语言模型生成回答（GPT、Claude、开源 LLM 等）。</li>
 <li>模型生成最终文本回答</li>
 <li>可以直接返回结果</li>
 <li>也可以添加一些后处理，比如去掉无关内容、格式化、润色以及引用来源等。</li>
 </ul>
-<h2 id="3">3 总结</h2>
+<h2 id="3">3 总结<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>从信息流角度看，RAG 在做的是：</p>
 <ul>
 <li>把“非参数化记忆”（外部文档、向量库）和“参数化记忆”（模型权重）结合：</li>
@@ -1806,7 +1896,7 @@
 <li>向量库是“可检索的教材/资料”；</li>
 <li>RAG 流程就是：先帮你“翻到相关页”，再让你“根据书上内容回答”。</li>
 </ul>
-<h2 id="4">4. 伪代码示例</h2>
+<h2 id="4">4. 伪代码示例<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <p>最最基础的 RAG（伪代码，方便理解流程，不是可运行工程）：</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># ===== 离线：索引 =====</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">documents</span> <span class="o">=</span> <span class="n">load_documents</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>                     <span class="c1"># 1. 读文档</span>
@@ -1899,7 +1989,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../python/python-getting-started/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting started">
+          <a href="../../python/04-%E5%AE%B9%E5%99%A8%E7%B1%BB%E5%9E%8B%E4%BA%8C%E5%AD%97%E5%85%B8%E4%B8%8E%E9%9B%86%E5%90%88/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 容器类型二：字典与集合">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1909,7 +1999,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Getting started
+                容器类型二：字典与集合
               </div>
             </div>
           </a>
