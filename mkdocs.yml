@@ -174,8 +174,10 @@ nav:
   - Python:
       - 快速开始: _notes/python/01-快速开始.md
       - 变量与基本数据类型: _notes/python/02-变量与基本数据类型.md
-      - 容器类型一：列表与元组: _notes/python/03-容器类型一列表与元组.md
-      - 容器类型二：字典与集合: _notes/python/04-容器类型二字典与集合.md
+      - 容器类型一：列表与元组: _notes/python/03-容器类型一：列表与元组.md
+      - 容器类型二：字典与集合: _notes/python/04-容器类型二：字典与集合.md
+      - 流程控制：条件与循环: _notes/python/05-流程控制：条件与循环.md
+      - 函数: _notes/python/06-函数.md
   - RAG:
       - RAG 实现原理: _notes/rag/rag-getting-started.md
       - RAG 递归到评估: _notes/rag/rag-questions-recursive-to-evaluation.md
