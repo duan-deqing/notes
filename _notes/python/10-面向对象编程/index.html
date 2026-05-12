@@ -29,7 +29,7 @@
     
     
       
-        <title>面向对象编程 - STYLAN's Notes</title>
+        <title>10-面向对象编程 - STYLAN's Notes</title>
       
     
     
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              面向对象编程
+              10-面向对象编程
             
           </span>
         </div>
@@ -221,7 +221,7 @@
   
     
   
-  Python
+  Python 基础
 
         </a>
       </li>
@@ -419,6 +419,8 @@
       
         
       
+        
+      
     
     
     
@@ -445,7 +447,7 @@
   <span class="md-ellipsis">
     
   
-    Python
+    Python 基础
   
 
     
@@ -461,7 +463,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Python
+    Python 基础
   
 
           </label>
@@ -481,7 +483,7 @@
   <span class="md-ellipsis">
     
   
-    目录大纲
+    00-目录大纲
   
 
     
@@ -509,7 +511,7 @@
   <span class="md-ellipsis">
     
   
-    快速开始
+    01-快速开始
   
 
     
@@ -537,7 +539,7 @@
   <span class="md-ellipsis">
     
   
-    变量与基本数据类型
+    02-变量与基本数据类型
   
 
     
@@ -565,7 +567,7 @@
   <span class="md-ellipsis">
     
   
-    容器类型一：列表与元组
+    03-容器类型一：列表与元组
   
 
     
@@ -593,7 +595,7 @@
   <span class="md-ellipsis">
     
   
-    容器类型二：字典与集合
+    04-容器类型二：字典与集合
   
 
     
@@ -621,7 +623,7 @@
   <span class="md-ellipsis">
     
   
-    流程控制：条件与循环
+    05-流程控制：条件与循环
   
 
     
@@ -649,7 +651,7 @@
   <span class="md-ellipsis">
     
   
-    函数
+    06-函数
   
 
     
@@ -677,7 +679,7 @@
   <span class="md-ellipsis">
     
   
-    模块与包
+    07-模块与包
   
 
     
@@ -705,7 +707,7 @@
   <span class="md-ellipsis">
     
   
-    异常处理
+    08-异常处理
   
 
     
@@ -733,7 +735,7 @@
   <span class="md-ellipsis">
     
   
-    文件与数据持久化
+    09-文件与数据持久化
   
 
     
@@ -770,7 +772,7 @@
   <span class="md-ellipsis">
     
   
-    面向对象编程
+    10-面向对象编程
   
 
     
@@ -788,7 +790,7 @@
   <span class="md-ellipsis">
     
   
-    面向对象编程
+    10-面向对象编程
   
 
     
@@ -1197,7 +1199,7 @@
   <span class="md-ellipsis">
     
   
-    迭代器与生成器
+    11-迭代器与生成器
   
 
     
@@ -1226,6 +1228,34 @@
     
   
     附录-补充与规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%99%84%E5%BD%95-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录-项目实战
   
 
     
@@ -2191,7 +2221,7 @@
 </span></code></pre></div>
 <p>实例属性是面向对象封装数据的主要方式。</p>
 <h3 id="_11">类属性<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<p>直接定义在 <code>class</code> 体中的变量，由**所有实例共享**。通过类名或实例均可访问，但如果通过实例对属性赋值，会在实例上创建同名**实例属性**，从而遮蔽类属性。</p>
+<p>直接定义在 <code>class</code> 体中的变量，由 <strong>所有实例共享</strong>。通过类名或实例均可访问，但如果通过实例对属性赋值，会在实例上创建同名 <strong>实例属性</strong>，从而遮蔽类属性。</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Cat</span><span class="p">:</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">species</span> <span class="o">=</span> <span class="s2">&quot;猫科&quot;</span>        <span class="c1"># 类属性</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
@@ -2478,7 +2508,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年5月12日 00:59:58 UTC"><span class="timeago" datetime="2026-05-12T00:59:58+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年5月12日 00:59:58 UTC">2026-05-12</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年5月12日 02:12:38 UTC"><span class="timeago" datetime="2026-05-12T02:12:38+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年5月12日 02:12:38 UTC">2026-05-12</span>
   </span>
 
     
@@ -2523,7 +2553,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../09-%E6%96%87%E4%BB%B6%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 文件与数据持久化">
+          <a href="../09-%E6%96%87%E4%BB%B6%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 09-文件与数据持久化">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2533,20 +2563,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                文件与数据持久化
+                09-文件与数据持久化
               </div>
             </div>
           </a>
         
         
           
-          <a href="../11-%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/" class="md-footer__link md-footer__link--next" aria-label="Next: 迭代器与生成器">
+          <a href="../11-%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/" class="md-footer__link md-footer__link--next" aria-label="Next: 11-迭代器与生成器">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                迭代器与生成器
+                11-迭代器与生成器
               </div>
             </div>
             <div class="md-footer__button md-icon">
