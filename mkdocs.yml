@@ -171,7 +171,7 @@ plugins:
 nav:
   - 首页: index.md
   # - 关于: about.md
-  - Python:
+  - Python 基础:
       - 目录大纲: _notes/python/00-目录大纲.md
       - 快速开始: _notes/python/01-快速开始.md
       - 变量与基本数据类型: _notes/python/02-变量与基本数据类型.md
@@ -185,6 +185,7 @@ nav:
       - 面向对象编程: _notes/python/10-面向对象编程.md
       - 迭代器与生成器: _notes/python/11-迭代器与生成器.md
       - 附录-补充与规范: _notes/python/附录-补充与规范.md
+      - 附录-项目实战: _notes/python/附录-项目实战.md
 
   - RAG:
       - RAG 实现原理: _notes/rag/rag-getting-started.md
