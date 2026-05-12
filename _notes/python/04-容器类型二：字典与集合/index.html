@@ -862,7 +862,7 @@
   <a href="#_17" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ++
+        ==
       
     </span>
   </a>
@@ -1904,7 +1904,7 @@
   <a href="#_17" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ++
+        ==
       
     </span>
   </a>
@@ -2002,7 +2002,9 @@
 
 <h1 id="_1">容器类型二：字典与集合<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">字典的创建与键值对规范<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<blockquote>
 <p>字典（dict）是 Python 中最重要的映射类型。它不像列表那样按位置管理数据，而是通过 <strong>唯一的键</strong> 来快速查找对应的值。可以把它理解为现实中的字典：根据一个词（键）查找它的释义（值）。</p>
+</blockquote>
 <h3 id="_3">创建字典<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>最直观的方式是用花括号 <code>{}</code> 包裹 <strong>键值对</strong>，键和值之间用冒号分隔，每个键值对之间用逗号隔开。</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
@@ -2120,7 +2122,9 @@
 <p>如果你需要一个真正的键列表（静态副本），可以用 <code>list(d.keys())</code>，但多数遍历场景直接用视图即可。</p>
 <h2 id="-">--<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
 <h2 id="_10">集合的创建与自动去重特性<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<blockquote>
 <p>集合（set）是一种 <strong>无序、不重复</strong> 的容器，元素必须是可哈希的（即不可变类型）。它的核心价值在于成员检测、去重和数学集合运算。</p>
+</blockquote>
 <h3 id="_11">创建集合<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <ul>
 <li>用花括号 <code>{}</code> 包围元素，元素间逗号分隔（<strong>注意：空花括号 <code>{}</code> 创建的是空字典！</strong>）。</li>
@@ -2225,9 +2229,11 @@
 <li>高效处理大量数据的交叉、合并问题（如共同好友、标签系统）。</li>
 </ul>
 </div>
-<h2 id="_17">++<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<h2 id="_17">==<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
 <h2 id="_18">推导式：列表、字典与集合推导式<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<blockquote>
 <p>推导式（comprehension）是 Python 的一颗语法糖，它用极简的表达式从一个可迭代对象生成新的容器，往往一行能顶数行循环。</p>
+</blockquote>
 <h3 id="_19">列表推导式<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
 <p>基本形式：</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">[</span><span class="n">expression</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span> <span class="k">if</span> <span class="n">condition</span><span class="p">]</span>
@@ -2310,7 +2316,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年5月12日 02:12:38 UTC"><span class="timeago" datetime="2026-05-12T02:12:38+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年5月12日 02:12:38 UTC">2026-05-12</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2026年5月12日 03:43:32 UTC"><span class="timeago" datetime="2026-05-12T03:43:32+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2026年5月12日 03:43:32 UTC">2026-05-12</span>
   </span>
 
     
