@@ -1,0 +1,18 @@
+{
+  "duan": {
+    "phone": "1293232",
+    "email": "203@qq.com"
+  },
+  "zhangsan": {
+    "phone": "12345",
+    "email": "zhangsan@163.com"
+  },
+  "lisi": {
+    "phone": "23414",
+    "email": "lisi@xx.com"
+  },
+  "wangwu": {
+    "phone": "1245",
+    "email": "wangwu@qq.com"
+  }
+}

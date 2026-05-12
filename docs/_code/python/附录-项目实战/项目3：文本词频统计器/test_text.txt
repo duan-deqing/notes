@@ -1,0 +1,11 @@
+When [building your project], MkDocs extracts the plain text from headlines and
+drops the original formatting. This is generally useful and a good idea, since
+this information is made available to other plugins that might have problems
+when being passed HTML instead of plain text.
+
+However, it also means that the entire formatting is lost.
+
+The plugin hooks into the rendering process, extracts the original headlines,
+and makes them available to be used in templates and plugins. The templates of
+Material for MkDocs use this information to render an enriched version of the
+navigation and table of contents.
