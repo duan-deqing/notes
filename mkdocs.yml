@@ -171,21 +171,27 @@ plugins:
 nav:
   - 首页: index.md
   # - 关于: about.md
-  - Python 基础:
-      - 00-目录大纲: _notes/python/00-目录大纲.md
-      - 01-快速开始: _notes/python/01-快速开始.md
-      - 02-变量与基本数据类型: _notes/python/02-变量与基本数据类型.md
-      - 03-容器类型一：列表与元组: _notes/python/03-容器类型一：列表与元组.md
-      - 04-容器类型二：字典与集合: _notes/python/04-容器类型二：字典与集合.md
-      - 05-流程控制：条件与循环: _notes/python/05-流程控制：条件与循环.md
-      - 06-函数: _notes/python/06-函数.md
-      - 07-模块与包: _notes/python/07-模块与包.md
-      - 08-异常处理: _notes/python/08-异常处理.md
-      - 09-文件与数据持久化: _notes/python/09-文件与数据持久化.md
-      - 10-面向对象编程: _notes/python/10-面向对象编程.md
-      - 11-迭代器与生成器: _notes/python/11-迭代器与生成器.md
-      - 附录-补充与规范: _notes/python/附录-补充与规范.md
-      - 附录-项目实战: _notes/python/附录-项目实战.md
+  - Python:
+      - _notes/python/index.md
+      - Basic:
+          - "基础":
+              - _notes/python/basic/00-目录大纲.md
+              - _notes/python/basic/01-快速开始.md
+              - _notes/python/basic/02-变量与基本数据类型.md
+              - _notes/python/basic/03-容器类型一：列表与元组.md
+              - _notes/python/basic/04-容器类型二：字典与集合.md
+              - _notes/python/basic/05-流程控制：条件与循环.md
+              - _notes/python/basic/06-函数.md
+              - _notes/python/basic/07-模块与包.md
+              - _notes/python/basic/08-异常处理.md
+              - _notes/python/basic/09-文件与数据持久化.md
+              - _notes/python/basic/10-面向对象编程.md
+              - _notes/python/basic/11-迭代器与生成器.md
+              - _notes/python/basic/附录-补充与规范.md
+              - _notes/python/basic/附录-项目实战.md
+      - Advanced:
+          - "进阶":
+              - _notes/python/basic/附录-项目实战.md
 
   - RAG:
       - RAG 实现原理: _notes/rag/rag-getting-started.md
