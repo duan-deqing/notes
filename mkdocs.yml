@@ -180,6 +180,11 @@ nav:
       - 流程控制：条件与循环: _notes/python/05-流程控制：条件与循环.md
       - 函数: _notes/python/06-函数.md
       - 模块与包: _notes/python/07-模块与包.md
+      - 异常处理: _notes/python/08-异常处理.md
+      - 文件与数据持久化: _notes/python/09-文件与数据持久化.md
+      - 面向对象编程: _notes/python/10-面向对象编程.md
+      - 迭代器与生成器: _notes/python/11-迭代器与生成器.md
+      - 附录-补充与规范: _notes/python/附录-补充与规范.md
 
   - RAG:
       - RAG 实现原理: _notes/rag/rag-getting-started.md
